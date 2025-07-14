@@ -1,54 +1,13 @@
 "use client"
 
-import type React from "react"
-
-import { useState } from "react"
 import { motion } from "framer-motion"
-import { FiMail, FiPhone, FiMapPin, FiGithub, FiLinkedin, FiSend, FiMessageCircle } from "react-icons/fi"
+import { FiMail, FiPhone, FiMapPin, FiGithub, FiLinkedin } from "react-icons/fi"
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [showChatbot, setShowChatbot] = useState(false)
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000))
-
-    setIsSubmitting(false)
-    setFormData({ name: "", email: "", message: "" })
-    alert("Message sent successfully!")
+  const handleEmailClick = () => {
+    // Open Gmail compose window with email pre-filled
+    window.open("https://mail.google.com/mail/u/0/?view=cm&fs=1&to=hemanthreads@gmail.com&su=Project%20Collaboration", "_blank")
   }
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    })
-  }
-
-  const chatbotQuestions = [
-    {
-      q: "Tell me about your top project",
-      a: "My top project is StreeRaksha, an AI-powered women's safety platform with real-time threat detection achieving 95% accuracy.",
-    },
-    {
-      q: "What tools do you love?",
-      a: "I love working with Python, TensorFlow, OpenCV for AI/ML, and Flask for web development. I'm also passionate about cybersecurity tools like Kali Linux.",
-    },
-    {
-      q: "What's your experience?",
-      a: "I'm a Media Head at IET ATMECE, former Cybersecurity Intern at Academor, and have won multiple hackathons including MIT Mysuru's Invaders Hackathon.",
-    },
-  ]
-
   return (
     <section id="contact" className="py-20 px-4 relative">
       <div className="max-w-7xl mx-auto">
@@ -66,196 +25,109 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 mb-20">
-          {/* Contact Information */}
-          <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+        <div className="max-w-4xl mx-auto">
+          <motion.div 
+            initial={{ opacity: 0, y: 50 }} 
+            whileInView={{ opacity: 1, y: 0 }} 
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
             <h3 className="text-2xl font-bold text-white mb-8">Let's Connect</h3>
-
-            <div className="space-y-6 mb-8">
+            
+            {/* Contact Information Cards */}
+            <div className="grid md:grid-cols-3 gap-6 mb-12">
               <motion.div
-                whileHover={{ scale: 1.02 }}
-                className="flex items-center gap-4 p-4 bg-gray-800/30 backdrop-blur-sm rounded-lg border border-purple-500/20"
+                onClick={handleEmailClick}
+                whileHover={{ scale: 1.05, y: -5 }}
+                className="flex flex-col items-center gap-4 p-6 bg-gray-800/30 backdrop-blur-sm rounded-xl border border-purple-500/20 hover:border-purple-500/40 transition-all cursor-pointer group"
               >
-                <div className="p-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-600">
-                  <FiMail className="text-white" size={20} />
+                <div className="p-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 group-hover:shadow-lg group-hover:shadow-purple-500/25 transition-all">
+                  <FiMail className="text-white" size={24} />
                 </div>
                 <div>
-                  <h4 className="text-white font-semibold">Email</h4>
+                  <h4 className="text-white font-semibold text-lg mb-2">Email Me</h4>
                   <p className="text-gray-400">hemanthreads@gmail.com</p>
+                  <p className="text-blue-400 text-sm mt-2">Click to open Gmail</p>
                 </div>
               </motion.div>
 
               <motion.div
-                whileHover={{ scale: 1.02 }}
-                className="flex items-center gap-4 p-4 bg-gray-800/30 backdrop-blur-sm rounded-lg border border-purple-500/20"
+                whileHover={{ scale: 1.05, y: -5 }}
+                className="flex flex-col items-center gap-4 p-6 bg-gray-800/30 backdrop-blur-sm rounded-xl border border-purple-500/20"
               >
-                <div className="p-3 rounded-full bg-gradient-to-r from-green-500 to-teal-600">
-                  <FiPhone className="text-white" size={20} />
+                <div className="p-4 rounded-full bg-gradient-to-r from-green-500 to-teal-600">
+                  <FiPhone className="text-white" size={24} />
                 </div>
                 <div>
-                  <h4 className="text-white font-semibold">Phone</h4>
+                  <h4 className="text-white font-semibold text-lg mb-2">Call Me</h4>
                   <p className="text-gray-400">+91 8884862170</p>
                 </div>
               </motion.div>
 
               <motion.div
-                whileHover={{ scale: 1.02 }}
-                className="flex items-center gap-4 p-4 bg-gray-800/30 backdrop-blur-sm rounded-lg border border-purple-500/20"
+                whileHover={{ scale: 1.05, y: -5 }}
+                className="flex flex-col items-center gap-4 p-6 bg-gray-800/30 backdrop-blur-sm rounded-xl border border-purple-500/20"
               >
-                <div className="p-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-600">
-                  <FiMapPin className="text-white" size={20} />
+                <div className="p-4 rounded-full bg-gradient-to-r from-purple-500 to-pink-600">
+                  <FiMapPin className="text-white" size={24} />
                 </div>
                 <div>
-                  <h4 className="text-white font-semibold">Location</h4>
-                  <p className="text-gray-400">Karnataka, India</p>
+                  <h4 className="text-white font-semibold text-lg mb-2">Location</h4>
+                  <p className="text-gray-400">Mysuru, Karnataka, India</p>
                 </div>
               </motion.div>
             </div>
 
             {/* Social Links */}
-            <div className="flex gap-4">
+            <div className="flex justify-center gap-6">
               <motion.a
-                whileHover={{ scale: 1.1 }}
+                whileHover={{ scale: 1.1, y: -5 }}
                 whileTap={{ scale: 0.9 }}
                 href="https://github.com/HemanthKumar-CS"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-4 bg-gray-800/50 backdrop-blur-sm rounded-full text-gray-300 hover:text-blue-400 transition-colors border border-gray-700 hover:border-blue-400"
+                className="p-4 bg-gray-800/50 backdrop-blur-sm rounded-full text-gray-300 hover:text-white border border-gray-700 hover:border-gray-500 transition-all hover:shadow-lg"
               >
-                <FiGithub size={24} />
+                <FiGithub size={28} />
               </motion.a>
+              
               <motion.a
-                whileHover={{ scale: 1.1 }}
+                whileHover={{ scale: 1.1, y: -5 }}
                 whileTap={{ scale: 0.9 }}
                 href="https://www.linkedin.com/in/hemanth-kumar-c-s-954792283"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-4 bg-gray-800/50 backdrop-blur-sm rounded-full text-gray-300 hover:text-blue-400 transition-colors border border-gray-700 hover:border-blue-400"
+                className="p-4 bg-gray-800/50 backdrop-blur-sm rounded-full text-gray-300 hover:text-blue-400 border border-gray-700 hover:border-blue-400 transition-all hover:shadow-lg hover:shadow-blue-400/25"
               >
-                <FiLinkedin size={24} />
+                <FiLinkedin size={28} />
               </motion.a>
-              <motion.a
-                whileHover={{ scale: 1.1 }}
+              
+              <motion.div
+                whileHover={{ scale: 1.1, y: -5 }}
                 whileTap={{ scale: 0.9 }}
-                href="mailto:hemanthreads@gmail.com"
-                className="p-4 bg-gray-800/50 backdrop-blur-sm rounded-full text-gray-300 hover:text-blue-400 transition-colors border border-gray-700 hover:border-blue-400"
+                onClick={handleEmailClick}
+                className="p-4 bg-gray-800/50 backdrop-blur-sm rounded-full text-gray-300 hover:text-purple-400 border border-gray-700 hover:border-purple-400 transition-all hover:shadow-lg hover:shadow-purple-400/25 cursor-pointer"
               >
-                <FiMail size={24} />
-              </motion.a>
+                <FiMail size={28} />
+              </motion.div>
             </div>
-          </motion.div>
 
-          {/* Contact Form */}
-          <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-white font-medium mb-2">
-                  Name
-                </label>
-                <motion.input
-                  whileFocus={{ scale: 1.02 }}
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 bg-gray-800/50 backdrop-blur-sm border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-blue-400 focus:outline-none transition-colors"
-                  placeholder="Your Name"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="email" className="block text-white font-medium mb-2">
-                  Email
-                </label>
-                <motion.input
-                  whileFocus={{ scale: 1.02 }}
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 bg-gray-800/50 backdrop-blur-sm border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-blue-400 focus:outline-none transition-colors"
-                  placeholder="your.email@example.com"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-white font-medium mb-2">
-                  Message
-                </label>
-                <motion.textarea
-                  whileFocus={{ scale: 1.02 }}
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  required
-                  rows={5}
-                  className="w-full px-4 py-3 bg-gray-800/50 backdrop-blur-sm border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-blue-400 focus:outline-none transition-colors resize-none"
-                  placeholder="Tell me about your project or collaboration idea..."
-                />
-              </div>
-
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg text-white font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all disabled:opacity-50"
-              >
-                {isSubmitting ? (
-                  <motion.div
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 1, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
-                    className="w-5 h-5 border-2 border-white border-t-transparent rounded-full"
-                  />
-                ) : (
-                  <>
-                    <FiSend size={20} />
-                    Send Message
-                  </>
-                )}
-              </motion.button>
-            </form>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5 }}
+              className="mt-12 p-6 bg-gradient-to-r from-blue-500/10 to-purple-600/10 rounded-xl border border-purple-500/20"
+            >
+              <p className="text-gray-300 text-lg">
+                🚀 Looking for a passionate AI/ML developer for your next project?
+              </p>
+              <p className="text-gray-400 mt-2">
+                Let's discuss how we can build innovative solutions together!
+              </p>
+            </motion.div>
           </motion.div>
         </div>
-
-        {/* Floating Chatbot */}
-        <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} className="fixed bottom-8 right-8 z-40">
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={() => setShowChatbot(!showChatbot)}
-            className="p-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full text-white shadow-lg hover:shadow-purple-500/25 transition-all"
-          >
-            <FiMessageCircle size={24} />
-          </motion.button>
-
-          {showChatbot && (
-            <motion.div
-              initial={{ opacity: 0, y: 20, scale: 0.8 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              className="absolute bottom-16 right-0 w-80 bg-gray-900 rounded-xl border border-purple-500/20 p-4 shadow-xl"
-            >
-              <h4 className="text-white font-semibold mb-4">Quick Questions</h4>
-              <div className="space-y-2">
-                {chatbotQuestions.map((item, index) => (
-                  <motion.button
-                    key={index}
-                    whileHover={{ scale: 1.02 }}
-                    onClick={() => alert(item.a)}
-                    className="w-full text-left p-3 bg-gray-800/50 rounded-lg text-gray-300 hover:text-white hover:bg-gray-700/50 transition-all text-sm"
-                  >
-                    {item.q}
-                  </motion.button>
-                ))}
-              </div>
-            </motion.div>
-          )}
-        </motion.div>
       </div>
     </section>
   )

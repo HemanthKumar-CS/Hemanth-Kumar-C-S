@@ -7,6 +7,9 @@ import { FiArrowDown, FiGithub, FiLinkedin, FiMail, FiDownload } from "react-ico
 const roles = ["ML Engineer", "AI Innovator", "Hackathon Champion", "Tech Visionary"]
 
 export default function Hero() {
+  const handleEmailClick = () => {
+    window.open("https://mail.google.com/mail/u/0/?view=cm&fs=1&to=hemanthreads@gmail.com&su=Project%20Collaboration", "_blank")
+  }
   const [currentRole, setCurrentRole] = useState(0)
   const [displayText, setDisplayText] = useState("")
   const [isDeleting, setIsDeleting] = useState(false)
@@ -239,22 +242,37 @@ export default function Hero() {
             {[
               { icon: FiGithub, href: "https://github.com/HemanthKumar-CS", label: "GitHub" },
               { icon: FiLinkedin, href: "https://www.linkedin.com/in/hemanth-kumar-c-s-954792283", label: "LinkedIn" },
-              { icon: FiMail, href: "mailto:hemanthreads@gmail.com", label: "Email" },
+              { icon: FiMail, href: null, label: "Email", onClick: handleEmailClick },
             ].map((social, index) => (
-              <motion.a
-                key={social.label}
-                whileHover={{ scale: 1.2, y: -5 }}
-                whileTap={{ scale: 0.9 }}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-4 bg-slate-800/30 backdrop-blur-sm rounded-full text-gray-400 hover:text-emerald-400 hover:bg-emerald-400/10 border border-gray-700 hover:border-emerald-400 transition-all duration-300"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1 + index * 0.1 }}
-              >
-                <social.icon size={24} />
-              </motion.a>
+              social.onClick ? (
+                <motion.button
+                  key={social.label}
+                  whileHover={{ scale: 1.2, y: -5 }}
+                  whileTap={{ scale: 0.9 }}
+                  onClick={social.onClick}
+                  className="p-4 bg-slate-800/30 backdrop-blur-sm rounded-full text-gray-400 hover:text-emerald-400 hover:bg-emerald-400/10 border border-gray-700 hover:border-emerald-400 transition-all duration-300"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1 + index * 0.1 }}
+                >
+                  <social.icon size={24} />
+                </motion.button>
+              ) : (
+                <motion.a
+                  key={social.label}
+                  whileHover={{ scale: 1.2, y: -5 }}
+                  whileTap={{ scale: 0.9 }}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-4 bg-slate-800/30 backdrop-blur-sm rounded-full text-gray-400 hover:text-emerald-400 hover:bg-emerald-400/10 border border-gray-700 hover:border-emerald-400 transition-all duration-300"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1 + index * 0.1 }}
+                >
+                  <social.icon size={24} />
+                </motion.a>
+              )
             ))}
           </motion.div>
         </motion.div>
