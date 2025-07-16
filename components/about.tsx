@@ -36,7 +36,7 @@ const interests = [
   {
     title: "Computer Vision",
     description: "Building visual recognition systems",
-    color: "from-purple-500 to-pink-500",
+    color: "from-slate-500 to-cyan-500",
   },
   { title: "Cybersecurity", description: "Network security and ethical hacking", color: "from-green-500 to-teal-500" },
   { title: "Web Development", description: "Creating responsive web applications", color: "from-orange-500 to-red-500" },
@@ -61,7 +61,7 @@ export default function About() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold font-orbitron mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold font-orbitron mb-4 bg-gradient-to-r from-cyan-400 to-slate-400 bg-clip-text text-transparent">
             About Me
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -78,7 +78,7 @@ export default function About() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="text-center p-6 bg-gray-800/30 backdrop-blur-sm rounded-xl border border-purple-500/20"
+              className="text-center p-6 glass rounded-xl"
             >
               <motion.div
                 initial={{ opacity: 0 }}
@@ -109,7 +109,7 @@ export default function About() {
                   transition={{ delay: index * 0.1 }}
                   className="flex items-start gap-4"
                 >
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-cyan-500 to-slate-600 rounded-full flex items-center justify-center">
                     <item.icon className="text-white" size={20} />
                   </div>
                   <div>
@@ -148,7 +148,7 @@ export default function About() {
                     </div>
                     {/* Back */}
                     <div
-                      className="absolute inset-0 rounded-xl bg-gray-800/80 backdrop-blur-sm p-4 flex items-center justify-center border border-purple-500/20"
+                      className="absolute inset-0 rounded-xl glass p-4 flex items-center justify-center"
                       style={{ transform: "rotateY(180deg)" }}
                     >
                       <p className="text-gray-300 text-sm text-center">{interest.description}</p>

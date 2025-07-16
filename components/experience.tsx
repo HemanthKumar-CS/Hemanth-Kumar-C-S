@@ -51,7 +51,7 @@ const experiences = [
       "Facilitated innovation and collaboration among participants",
     ],
     technologies: ["Event Planning", "Project Management", "Coordination", "Innovation"],
-    color: "from-purple-500 to-pink-500",
+    color: "from-slate-500 to-cyan-500",
   },
 ]
 
@@ -67,7 +67,7 @@ export default function Experience() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold font-orbitron mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold font-orbitron mb-4 bg-gradient-to-r from-cyan-400 to-slate-400 bg-clip-text text-transparent">
             Experience
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -77,7 +77,7 @@ export default function Experience() {
 
         <div className="relative">
           {/* Timeline Line */}
-          <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 rounded-full"></div>
+          <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-500 via-slate-500 to-teal-500 rounded-full"></div>
 
           <div className="space-y-12">
             {experiences.map((exp, index) => (
@@ -92,7 +92,7 @@ export default function Experience() {
                 onMouseLeave={() => setHoveredExperience(null)}
               >
                 {/* Timeline Node */}
-                <div className="absolute left-8 md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white rounded-full border-4 border-purple-500 z-10"></div>
+                <div className="absolute left-8 md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white rounded-full border-4 border-cyan-500 z-10"></div>
 
                 {/* Content Card */}
                 <motion.div
@@ -101,14 +101,14 @@ export default function Experience() {
                     index % 2 === 0 ? "md:mr-auto md:pr-8" : "md:ml-auto md:pl-8"
                   } ml-16 md:ml-0`}
                 >
-                  <div className="bg-gray-800/30 backdrop-blur-sm rounded-xl border border-purple-500/20 p-6 hover:border-purple-500/40 transition-all">
+                  <div className="bg-gray-800/30 backdrop-blur-sm rounded-xl border border-slate-500/20 p-6 hover:border-slate-400/40 transition-all">
                     <div className="flex items-center gap-4 mb-4">
                       <div className={`p-3 rounded-full bg-gradient-to-r ${exp.color}`}>
                         <exp.icon className="text-white" size={24} />
                       </div>
                       <div>
                         <h3 className="text-xl font-bold text-white">{exp.role}</h3>
-                        <p className="text-purple-400">{exp.company}</p>
+                        <p className="text-cyan-400">{exp.company}</p>
                         <div className="flex items-center gap-2 mt-1">
                           <span className="text-gray-400 text-sm">{exp.period}</span>
                           <span className="px-2 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs">

@@ -62,7 +62,7 @@ export default function Hero() {
       color: string
     }> = []
 
-    const colors = ["#10b981", "#3b82f6", "#8b5cf6", "#f59e0b"]
+    const colors = ["#ffffff", "#f3f4f6", "#e5e7eb", "#d1d5db"]
 
     // Create particles
     for (let i = 0; i < 150; i++) {
@@ -153,9 +153,9 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-400/10 border border-emerald-400/20 rounded-full text-emerald-400 text-sm font-medium mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 glass-card rounded-full text-white text-sm font-medium mb-8"
           >
-            <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
+            <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
             Available for Internships
           </motion.div>
 
@@ -172,7 +172,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="block bg-gradient-to-r from-emerald-400 via-blue-400 to-violet-400 bg-clip-text text-transparent"
+              className="block bg-gradient-to-r from-cyan-400 via-slate-300 to-white bg-clip-text text-transparent"
             >
               C S
             </motion.span>
@@ -184,7 +184,7 @@ export default function Hero() {
               <motion.span
                 animate={{ opacity: [1, 0] }}
                 transition={{ duration: 0.8, repeat: Number.POSITIVE_INFINITY }}
-                className="text-emerald-400 font-bold"
+                className="text-white font-bold"
               >
                 |
               </motion.span>
@@ -208,10 +208,10 @@ export default function Hero() {
             className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
           >
             <motion.button
-              whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(16, 185, 129, 0.3)" }}
+              whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(255, 255, 255, 0.1)" }}
               whileTap={{ scale: 0.95 }}
               onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
-              className="group px-8 py-4 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full text-white font-semibold text-lg shadow-lg shadow-emerald-500/25 transition-all duration-300"
+              className="group px-8 py-4 glass-strong rounded-full text-white font-semibold text-lg shadow-lg transition-all duration-300"
             >
               <span className="flex items-center gap-2">
                 Explore My Work
@@ -226,7 +226,7 @@ export default function Hero() {
               download="HEMANTH_KUMAR_CS_Resume.pdf"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-2 px-8 py-4 bg-slate-800/50 backdrop-blur-sm border border-gray-600 rounded-full text-gray-300 font-semibold hover:border-emerald-400 hover:text-emerald-400 transition-all duration-300"
+              className="flex items-center gap-2 px-8 py-4 glass-card rounded-full text-gray-300 font-semibold hover:text-white transition-all duration-300"
             >
               <FiDownload size={20} />
               Download Resume
@@ -251,7 +251,7 @@ export default function Hero() {
                   whileHover={{ scale: 1.2, y: -5 }}
                   whileTap={{ scale: 0.9 }}
                   onClick={social.onClick}
-                  className="p-4 bg-slate-800/30 backdrop-blur-sm rounded-full text-gray-400 hover:text-emerald-400 hover:bg-emerald-400/10 border border-gray-700 hover:border-emerald-400 transition-all duration-300"
+                  className="p-4 glass-card rounded-full text-gray-400 hover:text-white hover:glass-strong transition-all duration-300"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1 + index * 0.1 }}
@@ -266,7 +266,7 @@ export default function Hero() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-4 bg-slate-800/30 backdrop-blur-sm rounded-full text-gray-400 hover:text-emerald-400 hover:bg-emerald-400/10 border border-gray-700 hover:border-emerald-400 transition-all duration-300"
+                  className="p-4 glass-card rounded-full text-gray-400 hover:text-white hover:glass-strong transition-all duration-300"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1 + index * 0.1 }}
@@ -285,7 +285,7 @@ export default function Hero() {
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2"
         >
           <span className="text-gray-400 text-sm font-medium text-center">Scroll to explore</span>
-          <FiArrowDown size={24} className="text-emerald-400" />
+          <FiArrowDown size={24} className="text-white" />
         </motion.div>
       </div>
     </section>

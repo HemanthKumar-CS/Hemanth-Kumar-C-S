@@ -42,7 +42,7 @@ export default function FloatingElements() {
           repeat: Number.POSITIVE_INFINITY,
           ease: "linear",
         }}
-        className="absolute top-1/2 right-1/3 w-1 h-1 bg-violet-400/30 rounded-full"
+        className="absolute top-1/2 right-1/3 w-1 h-1 bg-slate-400/30 rounded-full"
       />
 
       {/* Floating lines */}

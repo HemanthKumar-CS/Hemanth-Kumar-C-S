@@ -13,7 +13,7 @@ import Resume from "@/components/resume"
 import HackathonMap from "@/components/hackathon-map"
 import Contact from "@/components/contact"
 import LoadingScreen from "@/components/loading-screen"
-import FloatingElements from "@/components/floating-elements"
+import BackgroundEffects from "@/components/background-effects"
 import CustomCursor from "@/components/custom-cursor"
 
 export default function Portfolio() {
@@ -36,9 +36,8 @@ export default function Portfolio() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
-            className="min-h-screen bg-gradient-to-br from-slate-950 via-gray-900 to-slate-900 relative overflow-x-hidden"
-          >
-            <FloatingElements />
+            className="min-h-screen bg-black relative overflow-x-hidden">
+            <BackgroundEffects />
             <Navbar />
 
             <main className="relative z-10">

@@ -58,7 +58,7 @@ const hackathons = [
     achievement: "Participant",
     participants: "60+",
     coordinates: { x: 40, y: 50 },
-    color: "from-blue-400 to-purple-500",
+    color: "from-cyan-400 to-slate-500",
     description: "Participated in innovative technology hackathon",
   },
   {
@@ -69,7 +69,7 @@ const hackathons = [
     achievement: "Participant",
     participants: "70+",
     coordinates: { x: 55, y: 45 },
-    color: "from-purple-400 to-pink-500",
+    color: "from-slate-400 to-cyan-500",
     description: "Engaged in collaborative problem-solving event",
   },
   {
@@ -97,7 +97,7 @@ export default function HackathonMap() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold font-orbitron mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold font-orbitron mb-4 bg-gradient-to-r from-cyan-400 to-slate-400 bg-clip-text text-transparent">
             Hackathon Journey
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -112,9 +112,9 @@ export default function HackathonMap() {
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="relative bg-gray-800/30 backdrop-blur-sm rounded-xl border border-purple-500/20 p-8 h-96 overflow-hidden"
+              className="relative bg-gray-800/30 backdrop-blur-sm rounded-xl border border-slate-500/20 p-8 h-96 overflow-hidden"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-pink-900/20"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-slate-900/20 to-teal-900/20"></div>
 
               {/* Map Background */}
               <div className="relative w-full h-full">
@@ -191,7 +191,7 @@ export default function HackathonMap() {
                 key={selectedHackathon.id}
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
-                className="bg-gray-800/30 backdrop-blur-sm rounded-xl border border-purple-500/20 p-6"
+                className="bg-gray-800/30 backdrop-blur-sm rounded-xl border border-slate-500/20 p-6"
               >
                 <div
                   className={`w-12 h-12 rounded-full bg-gradient-to-r ${selectedHackathon.color} flex items-center justify-center mb-4`}
@@ -200,7 +200,7 @@ export default function HackathonMap() {
                 </div>
 
                 <h4 className="text-lg font-bold text-white mb-2">{selectedHackathon.name}</h4>
-                <p className="text-purple-400 mb-4">{selectedHackathon.location}</p>
+                <p className="text-cyan-400 mb-4">{selectedHackathon.location}</p>
 
                 <div className="space-y-3 mb-4">
                   <div className="flex items-center gap-2">
@@ -220,7 +220,7 @@ export default function HackathonMap() {
                 <p className="text-gray-400 text-sm">{selectedHackathon.description}</p>
               </motion.div>
             ) : (
-              <div className="bg-gray-800/30 backdrop-blur-sm rounded-xl border border-purple-500/20 p-6 text-center">
+              <div className="bg-gray-800/30 backdrop-blur-sm rounded-xl border border-slate-500/20 p-6 text-center">
                 <FiMapPin className="text-gray-400 text-4xl mx-auto mb-4" />
                 <p className="text-gray-400">Click on a pin to view hackathon details</p>
               </div>
@@ -228,12 +228,12 @@ export default function HackathonMap() {
 
             {/* Quick Stats */}
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-gray-800/30 backdrop-blur-sm rounded-lg border border-purple-500/20 p-4 text-center">
-                <div className="text-2xl font-bold text-blue-400 mb-1">6+</div>
+              <div className="bg-gray-800/30 backdrop-blur-sm rounded-lg border border-slate-500/20 p-4 text-center">
+                <div className="text-2xl font-bold text-cyan-400 mb-1">6+</div>
                 <div className="text-gray-400 text-sm">Hackathons</div>
               </div>
-              <div className="bg-gray-800/30 backdrop-blur-sm rounded-lg border border-purple-500/20 p-4 text-center">
-                <div className="text-2xl font-bold text-green-400 mb-1">3</div>
+              <div className="bg-gray-800/30 backdrop-blur-sm rounded-lg border border-slate-500/20 p-4 text-center">
+                <div className="text-2xl font-bold text-emerald-400 mb-1">3</div>
                 <div className="text-gray-400 text-sm">Awards</div>
               </div>
             </div>

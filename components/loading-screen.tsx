@@ -32,7 +32,7 @@ export default function LoadingScreen() {
               repeat: Number.POSITIVE_INFINITY,
               ease: "linear",
             }}
-            className="absolute inset-2 border-4 border-transparent border-b-violet-400 border-l-amber-400 rounded-full"
+            className="absolute inset-2 border-4 border-transparent border-b-cyan-400 border-l-slate-400 rounded-full"
           />
           <motion.div
             animate={{
@@ -54,13 +54,13 @@ export default function LoadingScreen() {
           transition={{ delay: 0.5 }}
           className="space-y-4"
         >
-          <h1 className="text-3xl font-bold font-orbitron bg-gradient-to-r from-emerald-400 via-blue-400 to-violet-400 bg-clip-text text-transparent">
+          <h1 className="text-3xl font-bold font-orbitron bg-gradient-to-r from-white via-gray-300 to-gray-100 bg-clip-text text-transparent">
             Hemanth Kumar C S
           </h1>
           <motion.div
             animate={{ width: ["0%", "100%"] }}
             transition={{ duration: 2.5, ease: "easeInOut" }}
-            className="h-1 bg-gradient-to-r from-emerald-400 to-blue-400 rounded-full mx-auto"
+            className="h-1 bg-gradient-to-r from-white to-gray-400 rounded-full mx-auto"
             style={{ maxWidth: "200px" }}
           />
           <p className="text-gray-400 font-medium">Crafting Intelligent Solutions</p>

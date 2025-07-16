@@ -17,7 +17,7 @@ export default function Contact() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold font-orbitron mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold font-orbitron mb-4 bg-gradient-to-r from-cyan-400 to-slate-400 bg-clip-text text-transparent">
             Get In Touch
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -39,9 +39,9 @@ export default function Contact() {
               <motion.div
                 onClick={handleEmailClick}
                 whileHover={{ scale: 1.05, y: -5 }}
-                className="flex flex-col items-center gap-4 p-6 bg-gray-800/30 backdrop-blur-sm rounded-xl border border-purple-500/20 hover:border-purple-500/40 transition-all cursor-pointer group"
+                className="flex flex-col items-center gap-4 p-6 glass rounded-xl hover:glass-strong transition-all cursor-pointer group"
               >
-                <div className="p-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 group-hover:shadow-lg group-hover:shadow-purple-500/25 transition-all">
+                <div className="p-4 rounded-full bg-gradient-to-r from-cyan-500 to-slate-600 group-hover:shadow-lg group-hover:shadow-cyan-500/25 transition-all">
                   <FiMail className="text-white" size={24} />
                 </div>
                 <div>
@@ -53,9 +53,9 @@ export default function Contact() {
 
               <motion.div
                 whileHover={{ scale: 1.05, y: -5 }}
-                className="flex flex-col items-center gap-4 p-6 bg-gray-800/30 backdrop-blur-sm rounded-xl border border-purple-500/20"
+                className="flex flex-col items-center gap-4 p-6 glass rounded-xl"
               >
-                <div className="p-4 rounded-full bg-gradient-to-r from-green-500 to-teal-600">
+                <div className="p-4 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600">
                   <FiPhone className="text-white" size={24} />
                 </div>
                 <div>
@@ -66,9 +66,9 @@ export default function Contact() {
 
               <motion.div
                 whileHover={{ scale: 1.05, y: -5 }}
-                className="flex flex-col items-center gap-4 p-6 bg-gray-800/30 backdrop-blur-sm rounded-xl border border-purple-500/20"
+                className="flex flex-col items-center gap-4 p-6 glass rounded-xl"
               >
-                <div className="p-4 rounded-full bg-gradient-to-r from-purple-500 to-pink-600">
+                <div className="p-4 rounded-full bg-gradient-to-r from-slate-500 to-gray-600">
                   <FiMapPin className="text-white" size={24} />
                 </div>
                 <div>
@@ -106,7 +106,7 @@ export default function Contact() {
                 whileHover={{ scale: 1.1, y: -5 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={handleEmailClick}
-                className="p-4 bg-gray-800/50 backdrop-blur-sm rounded-full text-gray-300 hover:text-purple-400 border border-gray-700 hover:border-purple-400 transition-all hover:shadow-lg hover:shadow-purple-400/25 cursor-pointer"
+                className="p-4 bg-gray-800/50 backdrop-blur-sm rounded-full text-gray-300 hover:text-cyan-400 border border-gray-700 hover:border-cyan-400 transition-all hover:shadow-lg hover:shadow-cyan-400/25 cursor-pointer"
               >
                 <FiMail size={28} />
               </motion.div>
@@ -117,7 +117,7 @@ export default function Contact() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.5 }}
-              className="mt-12 p-6 bg-gradient-to-r from-blue-500/10 to-purple-600/10 rounded-xl border border-purple-500/20"
+              className="mt-12 p-6 bg-gradient-to-r from-cyan-500/10 to-slate-600/10 rounded-xl border border-slate-500/20"
             >
               <p className="text-gray-300 text-lg">
                 🚀 Looking for a passionate AI/ML developer for your next project?

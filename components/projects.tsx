@@ -81,7 +81,7 @@ export default function Projects() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold font-orbitron mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold font-orbitron mb-4 bg-gradient-to-r from-cyan-400 to-slate-400 bg-clip-text text-transparent">
             Featured Projects
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -105,8 +105,8 @@ export default function Projects() {
               onClick={() => setSelectedFilter(tag)}
               className={`px-6 py-2 rounded-full font-medium transition-all ${
                 selectedFilter === tag
-                  ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white"
-                  : "bg-gray-800/50 text-gray-400 hover:text-white border border-gray-700"
+                  ? "bg-gradient-to-r from-cyan-500 to-slate-600 text-white"
+                  : "glass-card text-gray-400 hover:text-white"
               }`}
             >
               {tag}
@@ -126,7 +126,7 @@ export default function Projects() {
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ y: -10 }}
-                className="bg-gray-800/30 backdrop-blur-sm rounded-xl border border-purple-500/20 overflow-hidden cursor-pointer group"
+                className="glass rounded-xl overflow-hidden cursor-pointer group"
                 onClick={() => setSelectedProject(project)}
               >
                 <div className="relative overflow-hidden">
@@ -147,7 +147,7 @@ export default function Projects() {
                   </div>
 
                   <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-                  <p className="text-purple-400 text-sm mb-2">{project.role}</p>
+                  <p className="text-cyan-400 text-sm mb-2">{project.role}</p>
                   <p className="text-gray-400 text-sm mb-4">{project.description}</p>
 
                   <div className="flex flex-wrap gap-2">
@@ -182,7 +182,7 @@ export default function Projects() {
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.8, opacity: 0 }}
-                className="bg-gray-900 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-purple-500/20"
+                className="bg-gray-900 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-slate-500/20"
                 onClick={(e) => e.stopPropagation()}
               >
                 <div className="relative">
@@ -209,7 +209,7 @@ export default function Projects() {
                   </div>
 
                   <h3 className="text-3xl font-bold text-white mb-2">{selectedProject.title}</h3>
-                  <p className="text-purple-400 mb-4">{selectedProject.role}</p>
+                  <p className="text-cyan-400 mb-4">{selectedProject.role}</p>
                   <p className="text-gray-300 mb-6 leading-relaxed">{selectedProject.longDescription}</p>
 
                   <div className="mb-6">
@@ -230,7 +230,7 @@ export default function Projects() {
                       href={selectedProject.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors"
+                      className="flex items-center gap-2 px-6 py-3 glass-strong text-white rounded-lg hover:glass transition-all"
                     >
                       <FiGithub size={20} />
                       View Code
@@ -242,7 +242,7 @@ export default function Projects() {
                         href={(selectedProject as any).demo}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg hover:shadow-purple-500/25 transition-all"
+                        className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-slate-600 text-white rounded-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all"
                       >
                         <FiExternalLink size={20} />
                         Live Demo
