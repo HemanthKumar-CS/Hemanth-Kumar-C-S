@@ -21,7 +21,7 @@ export default function Contact() {
             Get In Touch
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Ready to collaborate on innovative AI/ML projects? Let's connect and build something amazing together!
+            Ready to collaborate on innovative AI/ML projects? Let&apos;s connect and build something amazing together!
           </p>
         </motion.div>
 
@@ -32,7 +32,7 @@ export default function Contact() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h3 className="text-2xl font-bold text-white mb-8">Let's Connect</h3>
+            <h3 className="text-2xl font-bold text-white mb-8">Let&apos;s Connect</h3>
             
             {/* Contact Information Cards */}
             <div className="grid md:grid-cols-3 gap-6 mb-12">
@@ -123,7 +123,7 @@ export default function Contact() {
                 🚀 Looking for a passionate AI/ML developer for your next project?
               </p>
               <p className="text-gray-400 mt-2">
-                Let's discuss how we can build innovative solutions together!
+                Let&apos;s discuss how we can build innovative solutions together!
               </p>
             </motion.div>
           </motion.div>

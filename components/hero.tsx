@@ -141,11 +141,12 @@ export default function Hero() {
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       <canvas ref={canvasRef} className="absolute inset-0 z-0" />
 
-      <div className="relative z-10 text-center max-w-6xl mx-auto px-4 py-20">
+      <div className="relative z-10 text-center max-w-6xl mx-auto px-4 py-20 flex flex-col items-center justify-center min-h-screen">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
+          className="flex flex-col items-center w-full"
         >
           {/* Professional Badge */}
           <motion.div
@@ -177,8 +178,8 @@ export default function Hero() {
             </motion.span>
           </h1>
 
-          <div className="text-xl md:text-2xl lg:text-4xl text-gray-300 mb-6 h-12 md:h-16 flex items-center justify-center">
-            <span className="font-sora font-light">
+          <div className="text-xl md:text-2xl lg:text-4xl text-gray-300 mb-6 h-12 md:h-16 flex items-center justify-center w-full">
+            <span className="font-sora font-light text-center">
               {displayText}
               <motion.span
                 animate={{ opacity: [1, 0] }}
@@ -194,7 +195,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
-            className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed text-center"
           >
             Passionate about building innovative web applications and exploring AI/ML technologies. 
             Always eager to learn new technologies and create meaningful software solutions.
@@ -237,7 +238,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1 }}
-            className="flex gap-6 justify-center mb-12"
+            className="flex gap-6 justify-center items-center mb-12 w-full"
           >
             {[
               { icon: FiGithub, href: "https://github.com/HemanthKumar-CS", label: "GitHub" },
@@ -281,12 +282,10 @@ export default function Hero() {
         <motion.div
           animate={{ y: [0, 15, 0] }}
           transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2"
         >
-          <div className="flex flex-col items-center gap-2">
-            <span className="text-gray-400 text-sm font-medium">Scroll to explore</span>
-            <FiArrowDown size={24} className="text-emerald-400" />
-          </div>
+          <span className="text-gray-400 text-sm font-medium text-center">Scroll to explore</span>
+          <FiArrowDown size={24} className="text-emerald-400" />
         </motion.div>
       </div>
     </section>
