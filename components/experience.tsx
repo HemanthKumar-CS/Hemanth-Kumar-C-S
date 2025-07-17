@@ -1,66 +1,130 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { useState } from "react"
-import { FiUsers, FiShield, FiTrendingUp } from "react-icons/fi"
+import { FiUsers, FiShield, FiBook, FiCode, FiTarget } from "react-icons/fi"
 
-const experiences = [
+// Combined timeline data (journey + experience)
+const timelineData = [
   {
     id: 1,
-    role: "Media Head",
-    company: "IET onCampus ATMECE",
-    period: "2024 - Present",
-    type: "Leadership",
-    icon: FiUsers,
+    year: "2022",
+    title: "B.E. Computer Science & Engineering - AI & ML",
+    company: "ATME College of Engineering | VTU",
+    type: "Education",
+    description: "Pursuing Bachelor of Engineering with AI & ML Specialization (Expected 2026)",
     highlights: [
-      "Led content strategy and social media management for 60+ member technical society",
-      "Organized 7+ technical events and workshops, increasing student engagement by 60%",
-      "Member of Organisation commitment for hackathon TechAvishkar 2.0 (ATMECE | 2025)",
-      "Managed event promotion and coordination, achieving 90% attendance rate",
+      "Current CGPA: 8.28/10",
+      "Coursework: Machine Learning, Deep Learning, Computer Vision, DSA, DBMS, Software Engineering",
+      "Active in technical societies and competitive programming"
     ],
-    technologies: ["Event Management", "Social Media", "Content Strategy", "Team Leadership"],
+    technologies: ["Python", "Machine Learning", "Deep Learning", "Computer Vision", "DSA"],
+    icon: FiBook,
     color: "from-blue-500 to-cyan-500",
   },
   {
     id: 2,
-    role: "Cybersecurity Intern",
-    company: "Academor",
-    period: "2023",
-    type: "Remote",
-    icon: FiShield,
+    year: "2023",
+    title: "Cybersecurity Intern",
+    company: "Academor (Remote)",
+    type: "Internship",
+    description: "Completed comprehensive training in network security and ethical hacking",
     highlights: [
-      "Completed comprehensive cybersecurity training covering network security and ethical hacking",
-      "Gained hands-on experience with penetration testing tools and vulnerability assessment",
-      "Earned certification in cybersecurity fundamentals and best practices",
+      "Gained hands-on experience with penetration testing and vulnerability assessment",
       "Worked with industry-standard security tools and frameworks",
+      "Completed cybersecurity certification through Infosys Springboard"
     ],
     technologies: ["Kali Linux", "Wireshark", "Nmap", "Aircrack-ng", "Penetration Testing"],
+    icon: FiShield,
     color: "from-green-500 to-teal-500",
   },
   {
     id: 3,
-    role: "Hackathon Organizer",
-    company: "TechAvishkar 2.0",
-    period: "2025",
-    type: "Event",
-    icon: FiTrendingUp,
+    year: "2023",
+    title: 'Winner - "Invaders" Hackathon',
+    company: "MIT Mysuru",
+    type: "Achievement",
+    description: "Won hackathon competition showcasing innovative AI/ML solutions",
     highlights: [
-      "Co-organized major hackathon event at ATMECE",
-      "Managed participant registration and event logistics",
-      "Coordinated with sponsors and technical mentors",
-      "Facilitated innovation and collaboration among participants",
+      "Developed winning solution under time constraints",
+      "Demonstrated exceptional problem-solving and teamwork skills",
+      "First major hackathon victory launching competitive programming journey"
     ],
-    technologies: ["Event Planning", "Project Management", "Coordination", "Innovation"],
-    color: "from-slate-500 to-cyan-500",
+    technologies: ["AI/ML", "Problem Solving", "Team Collaboration", "Innovation"],
+    icon: FiCode,
+    color: "from-purple-500 to-pink-500",
+  },
+  {
+    id: 4,
+    year: "2024",
+    title: "Media Head",
+    company: "IET onCampus ATMECE",
+    type: "Leadership",
+    description: "Leading content strategy for 60+ member technical society (2024 - Present)",
+    highlights: [
+      "Led content strategy increasing engagement by 60%",
+      "Organized 7+ technical events and workshops with 90% attendance rate",
+      "Organisation committee member for TechAvishkar 2.0 hackathon (2025)",
+      "Managing social media and event promotion strategies"
+    ],
+    technologies: ["Event Management", "Content Strategy", "Leadership", "Social Media"],
+    icon: FiUsers,
+    color: "from-orange-500 to-red-500",
+  },
+  {
+    id: 5,
+    year: "2024",
+    title: 'Finalist - "RVCExIITB CTF 24"',
+    company: "RV College of Engineering Bangalore",
+    type: "Achievement",
+    description: "Reached finals in prestigious Capture The Flag cybersecurity competition",
+    highlights: [
+      "Competed in cybersecurity challenges against top teams",
+      "Applied penetration testing and vulnerability assessment skills",
+      "Demonstrated expertise in ethical hacking techniques"
+    ],
+    technologies: ["Cybersecurity", "CTF", "Penetration Testing", "Problem Solving"],
+    icon: FiShield,
+    color: "from-red-500 to-pink-500",
+  },
+  {
+    id: 6,
+    year: "2025",
+    title: 'Runner-up - "Code Battle 2K25"',
+    company: "KLSVDIT Haliyal",
+    type: "Achievement",
+    description: "Secured second place in competitive programming competition",
+    highlights: [
+      "Achieved runner-up position in coding competition",
+      "Demonstrated advanced programming and algorithmic skills",
+      "Part of ongoing competitive programming success streak"
+    ],
+    technologies: ["Competitive Programming", "Algorithms", "Problem Solving", "DSA"],
+    icon: FiCode,
+    color: "from-indigo-500 to-purple-500",
+  },
+  {
+    id: 7,
+    year: "2025",
+    title: "TechAvishkar 2.0 Organizer",
+    company: "ATMECE",
+    type: "Event Leadership",
+    description: "Organisation committee member for major hackathon event",
+    highlights: [
+      "Managing participant registration and event logistics",
+      "Coordinating with sponsors and technical mentors",
+      "Facilitating innovation and collaboration among participants",
+      "Leading event promotion and media strategy"
+    ],
+    technologies: ["Event Planning", "Project Management", "Coordination", "Leadership"],
+    icon: FiTarget,
+    color: "from-cyan-500 to-blue-500",
   },
 ]
 
 export default function Experience() {
-  const [hoveredExperience, setHoveredExperience] = useState<number | null>(null)
-
   return (
     <section id="experience" className="py-20 px-4 relative">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -68,80 +132,92 @@ export default function Experience() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold font-orbitron mb-4 bg-gradient-to-r from-cyan-400 to-slate-400 bg-clip-text text-transparent">
-            Experience
+            Experience & Journey
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Leadership roles and professional experiences that shaped my journey
+            My professional timeline from education to leadership roles
           </p>
         </motion.div>
 
+        {/* Clean Professional Timeline */}
         <div className="relative">
           {/* Timeline Line */}
-          <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-500 via-slate-500 to-teal-500 rounded-full"></div>
-
-          <div className="space-y-12">
-            {experiences.map((exp, index) => (
+          <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyan-500 to-slate-600"></div>
+          
+          {/* Timeline Items */}
+          <div className="space-y-8">
+            {timelineData.map((item, index) => (
               <motion.div
-                key={exp.id}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                key={item.id}
+                initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.2 }}
-                className={`relative flex items-center ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
-                onMouseEnter={() => setHoveredExperience(exp.id)}
-                onMouseLeave={() => setHoveredExperience(null)}
+                transition={{ delay: index * 0.1 }}
+                className="relative flex items-start gap-6 group"
               >
                 {/* Timeline Node */}
-                <div className="absolute left-8 md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white rounded-full border-4 border-cyan-500 z-10"></div>
+                <div className="relative z-10 flex-shrink-0">
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    className={`w-12 h-12 rounded-full bg-gradient-to-r ${item.color} flex items-center justify-center shadow-lg border-4 border-slate-900`}
+                  >
+                    <item.icon className="text-white" size={18} />
+                  </motion.div>
+                </div>
 
                 {/* Content Card */}
                 <motion.div
-                  whileHover={{ scale: 1.02 }}
-                  className={`w-full md:w-5/12 ${
-                    index % 2 === 0 ? "md:mr-auto md:pr-8" : "md:ml-auto md:pl-8"
-                  } ml-16 md:ml-0`}
+                  whileHover={{ x: 5 }}
+                  className="flex-1 pb-2"
                 >
-                  <div className="bg-gray-800/30 backdrop-blur-sm rounded-xl border border-slate-500/20 p-6 hover:border-slate-400/40 transition-all">
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className={`p-3 rounded-full bg-gradient-to-r ${exp.color}`}>
-                        <exp.icon className="text-white" size={24} />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-white">{exp.role}</h3>
-                        <p className="text-cyan-400">{exp.company}</p>
-                        <div className="flex items-center gap-2 mt-1">
-                          <span className="text-gray-400 text-sm">{exp.period}</span>
-                          <span className="px-2 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs">
-                            {exp.type}
-                          </span>
-                        </div>
-                      </div>
+                  <div className="p-6 glass rounded-2xl border border-slate-600/30 hover:border-cyan-500/40 transition-all duration-300">
+                    {/* Header */}
+                    <div className="flex flex-wrap items-center gap-3 mb-3">
+                      <span className={`px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r ${item.color} text-white`}>
+                        {item.year}
+                      </span>
+                      <span className="px-2 py-1 rounded text-xs bg-slate-800/50 text-slate-300 border border-slate-700/50">
+                        {item.type}
+                      </span>
                     </div>
+                    
+                    <h3 className="text-xl font-bold text-white mb-1 font-orbitron">
+                      {item.title}
+                    </h3>
+                    <p className="text-cyan-400 text-sm mb-3">
+                      {item.company}
+                    </p>
+                    <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                      {item.description}
+                    </p>
 
-                    <motion.div
-                      initial={{ height: 0 }}
-                      animate={{
-                        height: hoveredExperience === exp.id ? "auto" : "60px",
-                      }}
-                      className="overflow-hidden"
-                    >
-                      <ul className="space-y-2 mb-4">
-                        {exp.highlights.map((highlight, idx) => (
-                          <li key={idx} className="text-gray-300 text-sm flex items-start gap-2">
-                            <span className="text-blue-400 mt-1">•</span>
-                            {highlight}
-                          </li>
-                        ))}
-                      </ul>
+                    {/* Highlights */}
+                    {item.highlights && (
+                      <div className="mb-4">
+                        <ul className="space-y-1">
+                          {item.highlights.map((highlight, idx) => (
+                            <li key={idx} className="text-gray-400 text-xs flex items-start gap-2">
+                              <span className="w-1 h-1 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></span>
+                              {highlight}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
 
+                    {/* Technologies */}
+                    {item.technologies && (
                       <div className="flex flex-wrap gap-2">
-                        {exp.technologies.map((tech) => (
-                          <span key={tech} className="px-2 py-1 bg-gray-700/50 text-gray-300 rounded text-xs">
+                        {item.technologies.map((tech, idx) => (
+                          <span
+                            key={idx}
+                            className="px-2 py-1 text-xs bg-slate-800/50 text-cyan-300 rounded border border-slate-700/50"
+                          >
                             {tech}
                           </span>
                         ))}
                       </div>
-                    </motion.div>
+                    )}
                   </div>
                 </motion.div>
               </motion.div>

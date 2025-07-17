@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { FiArrowDown, FiGithub, FiLinkedin, FiMail, FiDownload } from "react-icons/fi"
 
@@ -13,7 +13,6 @@ export default function Hero() {
   const [currentRole, setCurrentRole] = useState(0)
   const [displayText, setDisplayText] = useState("")
   const [isDeleting, setIsDeleting] = useState(false)
-  const canvasRef = useRef<HTMLCanvasElement>(null)
 
   // Advanced typing animation
   useEffect(() => {
@@ -41,105 +40,8 @@ export default function Hero() {
     return () => clearTimeout(timeout)
   }, [displayText, isDeleting, currentRole])
 
-  // Advanced particle system
-  useEffect(() => {
-    const canvas = canvasRef.current
-    if (!canvas) return
-
-    const ctx = canvas.getContext("2d")
-    if (!ctx) return
-
-    canvas.width = window.innerWidth
-    canvas.height = window.innerHeight
-
-    const particles: Array<{
-      x: number
-      y: number
-      vx: number
-      vy: number
-      size: number
-      opacity: number
-      color: string
-    }> = []
-
-    const colors = ["#ffffff", "#f3f4f6", "#e5e7eb", "#d1d5db"]
-
-    // Create particles
-    for (let i = 0; i < 150; i++) {
-      particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.8,
-        vy: (Math.random() - 0.5) * 0.8,
-        size: Math.random() * 3 + 1,
-        opacity: Math.random() * 0.8 + 0.2,
-        color: colors[Math.floor(Math.random() * colors.length)],
-      })
-    }
-
-    function animate() {
-      if (!ctx || !canvas) return
-
-      ctx.clearRect(0, 0, canvas.width, canvas.height)
-
-      particles.forEach((particle, i) => {
-        particle.x += particle.vx
-        particle.y += particle.vy
-
-        // Wrap around edges
-        if (particle.x < 0) particle.x = canvas.width
-        if (particle.x > canvas.width) particle.x = 0
-        if (particle.y < 0) particle.y = canvas.height
-        if (particle.y > canvas.height) particle.y = 0
-
-        // Draw particle with glow effect
-        ctx.save()
-        ctx.globalAlpha = particle.opacity
-        ctx.shadowBlur = 20
-        ctx.shadowColor = particle.color
-        ctx.beginPath()
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)
-        ctx.fillStyle = particle.color
-        ctx.fill()
-        ctx.restore()
-
-        // Draw connections
-        particles.slice(i + 1).forEach((otherParticle) => {
-          const dx = particle.x - otherParticle.x
-          const dy = particle.y - otherParticle.y
-          const distance = Math.sqrt(dx * dx + dy * dy)
-
-          if (distance < 120) {
-            ctx.save()
-            ctx.globalAlpha = (1 - distance / 120) * 0.3
-            ctx.beginPath()
-            ctx.moveTo(particle.x, particle.y)
-            ctx.lineTo(otherParticle.x, otherParticle.y)
-            ctx.strokeStyle = particle.color
-            ctx.lineWidth = 1
-            ctx.stroke()
-            ctx.restore()
-          }
-        })
-      })
-
-      requestAnimationFrame(animate)
-    }
-
-    animate()
-
-    const handleResize = () => {
-      canvas.width = window.innerWidth
-      canvas.height = window.innerHeight
-    }
-
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
-  }, [])
-
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      <canvas ref={canvasRef} className="absolute inset-0 z-0" />
 
       <div className="relative z-10 text-center max-w-6xl mx-auto px-4 py-20 flex flex-col items-center justify-center min-h-screen">
         <motion.div
@@ -205,13 +107,21 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
-            className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
+            className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12 sm:mb-16 px-4"
           >
             <motion.button
-              whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(255, 255, 255, 0.1)" }}
+              whileHover={{ 
+                scale: 1.05, 
+                boxShadow: "0 0 40px rgba(6, 182, 212, 0.5)"
+              }}
               whileTap={{ scale: 0.95 }}
               onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
-              className="group px-8 py-4 glass-strong rounded-full text-white font-semibold text-lg shadow-lg transition-all duration-300"
+              className="group px-6 sm:px-8 py-3 sm:py-4 glass-strong rounded-2xl text-white font-semibold text-base sm:text-lg shadow-lg transition-all duration-300 border border-cyan-500/30 w-full sm:w-auto text-center"
+              data-magnetic="true"
+              style={{
+                backdropFilter: 'blur(20px)',
+                boxShadow: '0 0 30px rgba(6, 182, 212, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
+              }}
             >
               <span className="flex items-center gap-2">
                 Explore My Work
@@ -224,9 +134,17 @@ export default function Hero() {
             <motion.a
               href="/HEMANTH_KUMAR_CS_Resume.pdf"
               download="HEMANTH_KUMAR_CS_Resume.pdf"
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ 
+                scale: 1.05,
+                boxShadow: "0 0 30px rgba(71, 85, 105, 0.4)"
+              }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-2 px-8 py-4 glass-card rounded-full text-gray-300 font-semibold hover:text-white transition-all duration-300"
+              className="flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 glass-card rounded-2xl text-gray-300 font-semibold hover:text-white transition-all duration-300 border border-slate-600/30 hover:border-slate-500/50 w-full sm:w-auto justify-center text-base sm:text-lg"
+              data-magnetic="true"
+              style={{
+                backdropFilter: 'blur(20px)',
+                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
+              }}
             >
               <FiDownload size={20} />
               Download Resume
@@ -238,7 +156,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1 }}
-            className="flex gap-6 justify-center items-center mb-12 w-full"
+            className="flex gap-4 sm:gap-6 justify-center items-center mb-8 sm:mb-12 w-full px-4"
           >
             {[
               { icon: FiGithub, href: "https://github.com/HemanthKumar-CS", label: "GitHub" },
@@ -248,28 +166,44 @@ export default function Hero() {
               social.onClick ? (
                 <motion.button
                   key={social.label}
-                  whileHover={{ scale: 1.2, y: -5 }}
+                  whileHover={{ 
+                    scale: 1.2, 
+                    y: -5,
+                    boxShadow: "0 0 25px rgba(6, 182, 212, 0.4)"
+                  }}
                   whileTap={{ scale: 0.9 }}
                   onClick={social.onClick}
-                  className="p-4 glass-card rounded-full text-gray-400 hover:text-white hover:glass-strong transition-all duration-300"
+                  className="p-4 glass-card rounded-2xl text-gray-400 hover:text-white hover:glass-strong transition-all duration-300 border border-slate-700/30 hover:border-cyan-500/40"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1 + index * 0.1 }}
+                  style={{
+                    backdropFilter: 'blur(20px)',
+                    boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
+                  }}
                 >
                   <social.icon size={24} />
                 </motion.button>
               ) : (
                 <motion.a
                   key={social.label}
-                  whileHover={{ scale: 1.2, y: -5 }}
+                  whileHover={{ 
+                    scale: 1.2, 
+                    y: -5,
+                    boxShadow: "0 0 25px rgba(6, 182, 212, 0.4)"
+                  }}
                   whileTap={{ scale: 0.9 }}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-4 glass-card rounded-full text-gray-400 hover:text-white hover:glass-strong transition-all duration-300"
+                  className="p-4 glass-card rounded-2xl text-gray-400 hover:text-white hover:glass-strong transition-all duration-300 border border-slate-700/30 hover:border-cyan-500/40"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1 + index * 0.1 }}
+                  style={{
+                    backdropFilter: 'blur(20px)',
+                    boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
+                  }}
                 >
                   <social.icon size={24} />
                 </motion.a>
@@ -282,9 +216,9 @@ export default function Hero() {
         <motion.div
           animate={{ y: [0, 15, 0] }}
           transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
         >
-          <span className="text-gray-400 text-sm font-medium text-center">Scroll to explore</span>
+          <span className="text-gray-400 text-sm font-medium">Scroll to explore</span>
           <FiArrowDown size={24} className="text-white" />
         </motion.div>
       </div>

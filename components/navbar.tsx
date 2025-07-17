@@ -46,15 +46,27 @@ export default function Navbar() {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+      className={`fixed top-2 left-2 right-2 md:top-4 md:left-4 md:right-4 z-50 transition-all duration-500 rounded-2xl ${
         scrolled
-          ? "glass-strong shadow-lg"
-          : "glass-card"
+          ? "glass-strong shadow-xl shadow-cyan-500/10 border border-slate-700/50"
+          : "glass-card border border-slate-800/30"
       }`}
+      style={{
+        backdropFilter: 'blur(20px)',
+        boxShadow: scrolled 
+          ? '0 0 40px rgba(6, 182, 212, 0.15), 0 20px 25px -5px rgba(0, 0, 0, 0.1)'
+          : '0 0 20px rgba(0, 0, 0, 0.1)'
+      }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          <motion.div whileHover={{ scale: 1.05 }} className="text-2xl font-bold font-orbitron">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-3 md:py-4">
+          <motion.div 
+            whileHover={{ scale: 1.05 }} 
+            className="text-2xl font-bold font-orbitron"
+            style={{
+              filter: 'drop-shadow(0 0 8px rgba(6, 182, 212, 0.3))'
+            }}
+          >
             <span className="bg-gradient-to-r from-white via-gray-300 to-gray-200 bg-clip-text text-transparent">
               HK
             </span>
@@ -62,18 +74,27 @@ export default function Navbar() {
           </motion.div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-1">
+          <div className="hidden lg:flex space-x-2">
             {navItems.map((item) => (
               <motion.a
                 key={item.name}
                 href={item.href}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ 
+                  scale: 1.05,
+                  boxShadow: "0 0 20px rgba(6, 182, 212, 0.4)"
+                }}
                 whileTap={{ scale: 0.95 }}
-                className={`px-4 py-2 rounded-full transition-all font-medium ${
+                className={`px-3 lg:px-5 py-2 lg:py-2.5 rounded-full transition-all duration-300 font-medium text-sm lg:text-base ${
                   activeSection === item.href.substring(1)
-                    ? "glass-strong text-white shadow-lg"
-                    : "text-gray-300 hover:text-white hover:glass-card"
+                    ? "glass-strong text-white shadow-lg border border-cyan-500/30"
+                    : "text-gray-300 hover:text-white hover:glass-card border border-transparent hover:border-slate-600/30"
                 }`}
+                style={{
+                  backdropFilter: 'blur(10px)',
+                  boxShadow: activeSection === item.href.substring(1)
+                    ? '0 0 25px rgba(6, 182, 212, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
+                    : 'none'
+                }}
               >
                 {item.name}
               </motion.a>
@@ -83,7 +104,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-white p-2 hover:glass-card rounded-lg transition-all"
+            className="lg:hidden text-white p-2 hover:glass-card rounded-lg transition-all"
           >
             {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
           </button>
@@ -94,7 +115,7 @@ export default function Navbar() {
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="md:hidden glass rounded-2xl mt-2 p-6 mb-4"
+            className="lg:hidden glass rounded-2xl mt-2 p-4 mx-2"
           >
             {navItems.map((item) => (
               <a

@@ -38,10 +38,19 @@ export default function Contact() {
             <div className="grid md:grid-cols-3 gap-6 mb-12">
               <motion.div
                 onClick={handleEmailClick}
-                whileHover={{ scale: 1.05, y: -5 }}
-                className="flex flex-col items-center gap-4 p-6 glass rounded-xl hover:glass-strong transition-all cursor-pointer group"
+                whileHover={{ 
+                  scale: 1.05, 
+                  y: -5,
+                  boxShadow: "0 0 30px rgba(6, 182, 212, 0.4)"
+                }}
+                className="flex flex-col items-center gap-4 p-6 glass rounded-2xl hover:glass-strong transition-all cursor-pointer group border border-slate-700/30 hover:border-cyan-500/40"
+                style={{
+                  backdropFilter: 'blur(20px)',
+                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
+                }}
               >
-                <div className="p-4 rounded-full bg-gradient-to-r from-cyan-500 to-slate-600 group-hover:shadow-lg group-hover:shadow-cyan-500/25 transition-all">
+                <div className="p-4 rounded-2xl bg-gradient-to-r from-cyan-500 to-slate-600 group-hover:shadow-lg transition-all duration-300"
+                     style={{ boxShadow: '0 0 20px rgba(6, 182, 212, 0.3)' }}>
                   <FiMail className="text-white" size={24} />
                 </div>
                 <div>
@@ -52,10 +61,19 @@ export default function Contact() {
               </motion.div>
 
               <motion.div
-                whileHover={{ scale: 1.05, y: -5 }}
-                className="flex flex-col items-center gap-4 p-6 glass rounded-xl"
+                whileHover={{ 
+                  scale: 1.05, 
+                  y: -5,
+                  boxShadow: "0 0 30px rgba(16, 185, 129, 0.4)"
+                }}
+                className="flex flex-col items-center gap-4 p-6 glass rounded-2xl border border-slate-700/30 hover:border-emerald-500/40 transition-all duration-300"
+                style={{
+                  backdropFilter: 'blur(20px)',
+                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
+                }}
               >
-                <div className="p-4 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600">
+                <div className="p-4 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-600 transition-all duration-300"
+                     style={{ boxShadow: '0 0 20px rgba(16, 185, 129, 0.3)' }}>
                   <FiPhone className="text-white" size={24} />
                 </div>
                 <div>
@@ -65,10 +83,19 @@ export default function Contact() {
               </motion.div>
 
               <motion.div
-                whileHover={{ scale: 1.05, y: -5 }}
-                className="flex flex-col items-center gap-4 p-6 glass rounded-xl"
+                whileHover={{ 
+                  scale: 1.05, 
+                  y: -5,
+                  boxShadow: "0 0 30px rgba(71, 85, 105, 0.4)"
+                }}
+                className="flex flex-col items-center gap-4 p-6 glass rounded-2xl border border-slate-700/30 hover:border-slate-500/40 transition-all duration-300"
+                style={{
+                  backdropFilter: 'blur(20px)',
+                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
+                }}
               >
-                <div className="p-4 rounded-full bg-gradient-to-r from-slate-500 to-gray-600">
+                <div className="p-4 rounded-2xl bg-gradient-to-r from-slate-500 to-gray-600 transition-all duration-300"
+                     style={{ boxShadow: '0 0 20px rgba(71, 85, 105, 0.3)' }}>
                   <FiMapPin className="text-white" size={24} />
                 </div>
                 <div>

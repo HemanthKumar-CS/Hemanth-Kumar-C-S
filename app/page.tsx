@@ -13,8 +13,8 @@ import Resume from "@/components/resume"
 import HackathonMap from "@/components/hackathon-map"
 import Contact from "@/components/contact"
 import LoadingScreen from "@/components/loading-screen"
-import BackgroundEffects from "@/components/background-effects"
-import CustomCursor from "@/components/custom-cursor"
+import MinimalMagneticCursor from "@/components/minimal-magnetic-cursor"
+import GradientParticleBackground from "@/components/simple-backgrounds"
 
 export default function Portfolio() {
   const [loading, setLoading] = useState(true)
@@ -26,7 +26,7 @@ export default function Portfolio() {
 
   return (
     <>
-      <CustomCursor />
+      <MinimalMagneticCursor />
       <AnimatePresence mode="wait">
         {loading ? (
           <LoadingScreen key="loading" />
@@ -37,7 +37,7 @@ export default function Portfolio() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
             className="min-h-screen bg-black relative overflow-x-hidden">
-            <BackgroundEffects />
+            <GradientParticleBackground />
             <Navbar />
 
             <main className="relative z-10">
@@ -51,13 +51,6 @@ export default function Portfolio() {
               <HackathonMap />
               <Contact />
             </main>
-
-            {/* Background Pattern */}
-            <div className="fixed inset-0 z-0">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(16,185,129,0.1),transparent_50%)]" />
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.1),transparent_50%)]" />
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(168,85,247,0.1),transparent_50%)]" />
-            </div>
           </motion.div>
         )}
       </AnimatePresence>

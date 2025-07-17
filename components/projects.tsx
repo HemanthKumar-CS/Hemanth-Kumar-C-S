@@ -125,9 +125,16 @@ export default function Projects() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -10 }}
-                className="glass rounded-xl overflow-hidden cursor-pointer group"
+                whileHover={{ 
+                  y: -10,
+                  boxShadow: "0 0 40px rgba(6, 182, 212, 0.3)"
+                }}
+                className="glass rounded-2xl overflow-hidden cursor-pointer group border border-slate-700/30 hover:border-cyan-500/40 transition-all duration-300"
                 onClick={() => setSelectedProject(project)}
+                style={{
+                  backdropFilter: 'blur(20px)',
+                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
+                }}
               >
                 <div className="relative overflow-hidden">
                   <img
