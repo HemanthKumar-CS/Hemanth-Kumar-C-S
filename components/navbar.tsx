@@ -70,7 +70,7 @@ export default function Navbar() {
             <span className="bg-gradient-to-r from-white via-gray-300 to-gray-200 bg-clip-text text-transparent">
               HK
             </span>
-            <span className="text-white">.dev</span>
+            <span className="text-white">.CS</span>
           </motion.div>
 
           {/* Desktop Menu */}
