@@ -26,8 +26,7 @@ import "./globals.css"
 
 export const metadata: Metadata = {
   title: "Hemanth Kumar C S | Portfolio",
-  description: "Created with v0",
-  generator: "v0.dev",
+  description: "Self Portfolio of Hemanth Kumar C S",
 }
 
 export default function PortfolioRootLayout({ children }: { children: React.ReactNode }) {
