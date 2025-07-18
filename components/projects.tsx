@@ -16,12 +16,12 @@ const projects = [
       "Developed a comprehensive women's safety platform using advanced computer vision techniques. The system integrates multiple CV models including YOLO, MediaPipe, and MobileNetV2 for gesture recognition and threat detection. Built an interactive dashboard with live monitoring capabilities and created a React Native mobile app with safety maps and SOS alerts.",
     tags: ["AI/ML", "Computer Vision"],
     tech: ["Python", "FastAPI", "React Native", "Supabase", "OpenCV", "YOLO", "MediaPipe"],
-    image: "/placeholder.svg?height=300&width=500",
+    image: "/StreeRaksha.png?height=300&width=500",
     github: "https://github.com/HemanthKumar-CS/StreeRaksha",
   },
   {
     id: 2,
-    title: "Skin Disease Detection",
+    title: "Melanocytic Nevi Classification using Transfer Learning",
     role: "Deep Learning Developer",
     impact: "Medical diagnosis automation",
     description:
@@ -30,7 +30,7 @@ const projects = [
       "Built a robust skin disease detection system achieving 89% accuracy using ResNet50 architecture. Preprocessed and augmented over 10,000 medical images to improve model generalization. Implemented advanced techniques including class weighting to handle dataset imbalance and deployed comprehensive evaluation metrics.",
     tags: ["AI/ML", "Computer Vision"],
     tech: ["Python", "TensorFlow", "Keras", "ResNet50", "Matplotlib", "Seaborn"],
-    image: "/placeholder.svg?height=300&width=500",
+    image: "/Melanocytic_nevi.jpg?height=300&width=500",
     github: "https://github.com/HemanthKumar-CS/Melanocytic_Nevi_Classification_using_Transfer_Learning",
   },
   {
@@ -44,7 +44,7 @@ const projects = [
       "Real-time tracking system for students with 99.9% uptime, reducing wait times by 40%. Led the development of a comprehensive college bus transportation system that streamlined campus transportation for students. Implemented real-time tracking using Google Maps API, developed role-based access system for admins, drivers, and students, and created route optimization algorithms.",
     tags: ["Web Dev"],
     tech: ["Python", "Flask", "MongoDB", "Google Maps API", "HTML", "CSS", "JavaScript"],
-    image: "/placeholder.svg?height=300&width=500",
+    image: "/Move_Mentor.jpg?height=300&width=500",
     github: "https://github.com/HemanthKumar-CS/move_mentor",
   },
   {
@@ -58,7 +58,7 @@ const projects = [
       "Built ML model with 85% accuracy for early disease detection from health parameters. Developed a machine learning model for early disease detection based on various health parameters. Created a user-friendly web interface that processes health parameters in real-time and provides instant predictions. The system helps in preventive healthcare by identifying potential health risks early.",
     tags: ["AI/ML"],
     tech: ["Python", "scikit-learn", "NumPy", "Pandas", "Streamlit", "Jupyter Notebook"],
-    image: "/placeholder.svg?height=300&width=500",
+    image: "/Disease_Prediction.png?height=300&width=500",
     github: "https://github.com/HemanthKumar-CS/Disease-Analysis-System",
   },
 ]

@@ -51,15 +51,15 @@ export default function Hero() {
           className="flex flex-col items-center w-full"
         >
           {/* Professional Badge */}
-          <motion.div
+            <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-4 py-2 glass-card rounded-full text-white text-sm font-medium mb-8"
-          >
-            <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
-            Available for Internships
-          </motion.div>
+            className="inline-flex items-center gap-2 px-4 py-2 glass-card rounded-full text-white bg-green-900/30 text-sm font-medium mb-8"
+            >
+            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+            Available for Internships & Works
+            </motion.div>
 
           <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold font-orbitron mb-6 leading-tight">
             <motion.span
@@ -216,7 +216,7 @@ export default function Hero() {
         <motion.div
           animate={{ y: [0, 15, 0] }}
           transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+          className="absolute bottom-8 left-1/2.5 -translate-x-1/2 flex flex-col items-center gap-2"
         >
           <span className="text-gray-400 text-sm font-medium">Scroll to explore</span>
           <FiArrowDown size={24} className="text-white" />
