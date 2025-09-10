@@ -181,7 +181,7 @@ export default function About() {
                     {/* Photo Container */}
                     <div className="relative rounded-full p-2 bg-gradient-to-r from-cyan-500/40 via-blue-500/40 to-emerald-500/40 backdrop-blur-sm">
                       <img
-                        src="/HKCS.jpg"
+                        src="/profile-picrure.png"
                         alt="Hemanth Kumar"
                         className="w-64 h-64 rounded-full object-cover border-4 border-white/20 transition-all duration-500 group-hover:border-white/40"
                         style={{
