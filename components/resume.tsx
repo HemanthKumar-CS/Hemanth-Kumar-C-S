@@ -160,8 +160,8 @@ export default function Resume() {
           </p>
 
           <motion.a
-            href="/HEMANTH_KUMAR_CS_Resume.pdf"
-            download="HEMANTH_KUMAR_CS_Resume.pdf"
+            href="/Hemanth_Kumar_CS-Resume.pdf"
+            download="Hemanth_Kumar_CS-Resume.pdf"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-slate-600 rounded-full text-white font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all"
