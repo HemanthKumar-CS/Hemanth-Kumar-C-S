@@ -114,7 +114,7 @@ export default function About() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   <div className="flex items-center gap-3 p-3 glass-card rounded-lg">
                     <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-                    <span className="text-gray-300 text-sm">CGPA: 8.28/10</span>
+                    <span className="text-gray-300 text-sm">CGPA: 8.38/10</span>
                   </div>
                   <div className="flex items-center gap-3 p-3 glass-card rounded-lg">
                     <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>
