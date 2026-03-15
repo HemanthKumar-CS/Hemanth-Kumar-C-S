@@ -39,6 +39,13 @@ const journeyData = [
     icon: FiTarget,
     color: "from-cyan-500 to-blue-500"
   },
+  {
+    year: "2026",
+    title: "Student Intern at HAL",
+    description: "IT Department, Overhaul Division, Hindustan Aeronautics Limited, Bangalore",
+    icon: FiBriefcase,
+    color: "from-emerald-500 to-cyan-500"
+  },
 ]
 
 const expertise = [
@@ -99,12 +106,12 @@ export default function About() {
                   AI & ML Engineering Student
                 </h3>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  Final-year AI & ML Engineering student with a passion for building intelligent solutions. 
-                  Active in hackathons since 2023 with proven track record in competitive programming and real-world projects.
+                  Final-year AI & ML Engineering student with industry experience at HAL (Hindustan Aeronautics Limited).
+                  Building production-grade ML systems for traffic management, cybersecurity, and healthcare with real-time inference on edge devices.
                 </p>
                 <p className="text-gray-400 leading-relaxed">
-                  I specialize in machine learning, computer vision, and cybersecurity. Currently leading technical 
-                  initiatives at IET onCampus ATMECE and organizing hackathons to foster innovation in the tech community.
+                  I specialize in deep learning, computer vision, and federated learning. IEEE-published researcher (ICAFT 2025) and active hackathon competitor since 2023.
+                  Currently interning at HAL and leading technical initiatives at IET onCampus ATMECE.
                 </p>
               </div>
 
@@ -114,7 +121,7 @@ export default function About() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   <div className="flex items-center gap-3 p-3 glass-card rounded-lg">
                     <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-                    <span className="text-gray-300 text-sm">CGPA: 8.38/10</span>
+                    <span className="text-gray-300 text-sm">CGPA: 8.4/10</span>
                   </div>
                   <div className="flex items-center gap-3 p-3 glass-card rounded-lg">
                     <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>
@@ -122,11 +129,11 @@ export default function About() {
                   </div>
                   <div className="flex items-center gap-3 p-3 glass-card rounded-lg">
                     <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                    <span className="text-gray-300 text-sm">5+ Projects</span>
+                    <span className="text-gray-300 text-sm">6+ Projects</span>
                   </div>
                   <div className="flex items-center gap-3 p-3 glass-card rounded-lg">
                     <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-                    <span className="text-gray-300 text-sm">Media Head</span>
+                    <span className="text-gray-300 text-sm">HAL Intern</span>
                   </div>
                 </div>
               </div>

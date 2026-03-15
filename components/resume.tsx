@@ -53,7 +53,7 @@ const resumeSections: ResumeSection[] = [
       email: "hemanthreads@gmail.com",
       phone: "+91 8884862170",
       objective:
-        "Final-year AI & ML Engineering student seeking internship opportunities to apply expertise in machine learning, computer vision, and software development. Passionate about solving real-world problems through technology and innovation.",
+        "Final-year AI & ML Engineering student with industry experience at HAL (Hindustan Aeronautics Limited) seeking ML Engineer / Deep Learning Engineer roles. Expertise in deep learning, computer vision, and federated learning. IEEE-published researcher and hackathon winner with production-grade ML systems deployed on edge devices.",
     } as PersonalInfo,
   },
   {
@@ -66,7 +66,7 @@ const resumeSections: ResumeSection[] = [
       institution: "ATME College of Engineering",
       university: "Visvesvaraya Technological University (VTU)",
       graduation: "Expected 2026",
-      cgpa: "8.28/10",
+      cgpa: "8.4/10",
       coursework: [
         "Machine Learning",
         "Deep Learning",
@@ -85,25 +85,32 @@ const resumeSections: ResumeSection[] = [
     icon: FiBriefcase,
     content: [
       {
+        role: "Student Intern – IT Department",
+        company: "HAL (Hindustan Aeronautics Limited), Bangalore",
+        period: "Jan 2026 - Present",
+        highlights: [
+          "Built an intranet-based solution for the Overhaul Division to streamline inter-department folder organization and file accessibility",
+          "Resolved real-time inter-department communication and documentation challenges for the Customer Service department",
+          "Developing production-grade internal tools in a government aerospace environment",
+        ],
+      },
+      {
         role: "Media Head",
         company: "IET onCampus ATMECE",
-        period: "2024 - Present",
+        period: "Dec 2024 - Present",
         highlights: [
-          "Led content strategy and social media management for technical society",
-          "Organized technical events and workshops for student community",
-          "Coordinated team activities and increased member engagement",
-          "Participated in organizing TechAvishkar 2.0 hackathon event",
+          "Led content strategy and social media management for technical society of 60+ members",
+          "Increased event engagement by ~60%",
+          "Organized 7+ technical events and a 24-hour state hackathon",
         ],
       },
       {
         role: "Cybersecurity Intern (Remote)",
         company: "Academor",
-        period: "2023",
+        period: "Aug 2023 - Nov 2023",
         highlights: [
-          "Completed cybersecurity fundamentals training program",
+          "Performed network security training and hands-on vulnerability assessments",
           "Gained practical experience with security tools and frameworks",
-          "Learned network security concepts and vulnerability assessment",
-          "Worked with penetration testing tools and methodologies",
         ],
       },
     ] as Experience[],
@@ -113,11 +120,11 @@ const resumeSections: ResumeSection[] = [
     title: "Technical Skills",
     icon: FiCode,
     content: {
-      programming: ["Python", "Java", "C", "R", "HTML", "CSS", "JavaScript"],
-      frameworks: ["TensorFlow", "Keras", "scikit-learn", "OpenCV", "Flask", "React Native", "YOLO", "MediaPipe"],
+      programming: ["Python", "Java", "C", "R"],
+      frameworks: ["TensorFlow", "Keras", "PyTorch", "Flower (FL)", "scikit-learn", "OpenCV", "ONNX Runtime", "YOLOv8/v11", "MediaPipe", "ByteTrack", "Flask", "Streamlit"],
       databases: ["MongoDB", "MySQL", "Firebase", "Supabase"],
-      tools: ["Git", "Jupyter Notebook", "Google Maps API", "Tableau", "PowerBI", "Kali Linux", "Wireshark", "Nmap"],
-      concepts: ["Machine Learning", "Computer Vision", "Web Development", "Database Design"],
+      tools: ["Git", "Docker", "Jupyter Notebook", "Power BI", "TensorFlow Lite", "Raspberry Pi"],
+      concepts: ["Machine Learning", "Deep Learning", "Computer Vision", "Federated Learning", "Edge Computing", "Web Development"],
     } as Skills,
   },
   {
@@ -125,13 +132,14 @@ const resumeSections: ResumeSection[] = [
     title: "Achievements & Certifications",
     icon: FiAward,
     content: [
-      'Winner - "Invaders" Hackathon, MIT Mysuru (2023)',
-      'Runner-up - "Code Battle 2K25", KLSVDIT Haliyal (2025)',
-      'Finalist - "RVCExIITB CTF 24", RV College of Engineering (2024)',
+      "IEEE ICAFT 2025: Research paper selected for presentation – Federated Learning for DDoS Detection",
+      'Winner – "Invaders" Hackathon, MIT Mysuru (2023)',
+      'Runner-up – "Code Battle 2K25", KLSVDIT Haliyal (2025)',
+      'Finalist – "RVCExIITB CTF 24", RV College of Engineering (2024)',
       "Machine Learning with TensorFlow - Infosys Springboard",
-      "Cybersecurity Fundamentals - Infosys Springboard",
-      "Introduction to SQL - Oracle",
+      "Building LLM Apps with Prompt Engineering - Nvidia",
       "Analytics and Data Visualization - Tableau",
+      "Oracle SQL - Oracle",
     ] as string[],
   },
 ]

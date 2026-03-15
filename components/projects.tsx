@@ -7,34 +7,76 @@ import { FiGithub, FiExternalLink, FiX, FiFilter } from "react-icons/fi"
 const projects = [
   {
     id: 1,
+    title: "D-TECS – Dynamic Traffic Emergency Control System",
+    role: "Computer Vision Engineer",
+    impact: "Real-time AI traffic management",
+    description:
+      "End-to-end AI traffic management system with emergency vehicle priority routing and adaptive signal timing.",
+    longDescription:
+      "Built a computer vision pipeline using YOLOv11 + ONNX Runtime for real-time vehicle detection and density analysis at traffic intersections. Implemented an Emergency Priority System (EPS) that detects ambulances via visual identifiers and dynamically creates 'Green Corridors' by overriding signal cycles to reduce emergency response time. Adaptive signal timing algorithms use live lane-wise vehicle counts with realistic Indian traffic logic (clockwise N→E→S→W phase control). Full-stack: Python AI engine with OpenCV/ByteTrack, WebSocket backend, and React dashboard with real-time video analytics and manual override controls.",
+    tags: ["AI/ML", "Computer Vision"],
+    tech: ["Python", "YOLOv11", "ONNX Runtime", "OpenCV", "ByteTrack", "React", "WebSocket"],
+    image: "/placeholder.svg?height=300&width=500",
+    github: "https://github.com/HemanthKumar-CS",
+  },
+  {
+    id: 2,
+    title: "Privacy-Preserving Federated Learning for DDoS Detection",
+    role: "ML Research Engineer",
+    impact: "IEEE ICAFT 2025 – Published",
+    description:
+      "IEEE-published federated learning system for DDoS intrusion detection that trains on distributed data without centralization.",
+    longDescription:
+      "Engineered a 1D-CNN-based intrusion detection system using the Flower framework for federated learning, training on distributed network data without centralization. Implemented Multi-Krum + FedAvg aggregation to defend against Byzantine attacks from malicious clients. Achieved 80% detection accuracy on the CIC-DDoS2019 dataset with a 30-feature network traffic schema. Built an async federated simulation with 4 clients and a monitoring dashboard, containerized with Docker Compose. Research accepted for presentation at IEEE ICAFT 2025.",
+    tags: ["AI/ML", "Cybersecurity", "Federated Learning"],
+    tech: ["Python", "PyTorch", "Flower", "1D-CNN", "Docker Compose", "CIC-DDoS2019"],
+    image: "/placeholder.svg?height=300&width=500",
+    github: "https://github.com/HemanthKumar-CS",
+  },
+  {
+    id: 3,
     title: "StreeRaksha",
     role: "Computer Vision Engineer",
-    impact: "Real-time threat detection",
+    impact: "Real-time threat detection on edge",
     description:
-      "AI-powered women's safety platform with real-time threat detection, interactive dashboard, and mobile app integration.",
+      "AI-powered women's safety platform with real-time threat detection on edge devices, live dashboard, and mobile app integration.",
     longDescription:
-      "Developed a comprehensive women's safety platform using advanced computer vision techniques. The system integrates multiple CV models including YOLO, MediaPipe, and MobileNetV2 for gesture recognition and threat detection. Built an interactive dashboard with live monitoring capabilities and created a React Native mobile app with safety maps and SOS alerts.",
+      "Built a real-time threat detection pipeline on edge devices (Raspberry Pi/Jetson) using YOLOv11s + RTMPose-m + PromptPAR with a 6-factor risk scoring system (pose, gender, proximity, time, grouping, motion). Architected a Go backend with WebSocket broker (Gin) handling AI stream ingestion, Firebase persistence, and live dashboard broadcast, deployed via Docker multi-stage builds (10MB binary). Implemented state machine alerting with 4 risk levels, evidence capture on ALERT (80+ score), and configurable thresholds for production deployment.",
     tags: ["AI/ML", "Computer Vision"],
-    tech: ["Python", "FastAPI", "React Native", "Supabase", "OpenCV", "YOLO", "MediaPipe"],
+    tech: ["Python", "Go", "YOLOv11s", "RTMPose", "Raspberry Pi", "FastAPI", "Firebase", "Docker"],
     image: "/StreeRaksha.png?height=300&width=500",
     github: "https://github.com/HemanthKumar-CS/StreeRaksha",
   },
   {
-    id: 2,
+    id: 4,
     title: "Melanocytic Nevi Classification using Transfer Learning",
     role: "Deep Learning Developer",
-    impact: "Medical diagnosis automation",
+    impact: "Medical diagnosis automation – Journal Published",
     description:
-      "Deep learning system for skin disease classification using ResNet50 architecture with comprehensive evaluation metrics.",
+      "IgMin Research journal-published deep learning system for skin disease classification achieving 89% accuracy with ResNet50.",
     longDescription:
-      "Built a robust skin disease detection system achieving 89% accuracy using ResNet50 architecture. Preprocessed and augmented over 10,000 medical images to improve model generalization. Implemented advanced techniques including class weighting to handle dataset imbalance and deployed comprehensive evaluation metrics.",
+      "Built a ResNet50 classifier on 10,000+ dermoscopic images from the ISIC dataset, achieving 89% accuracy (vs. 82% baseline) through class weighting and heavy augmentation to handle dataset imbalance. Preprocessed and augmented medical images to improve model generalization, with comprehensive evaluation metrics. Published in IgMin Research journal.",
     tags: ["AI/ML", "Computer Vision"],
     tech: ["Python", "TensorFlow", "Keras", "ResNet50", "Matplotlib", "Seaborn"],
     image: "/Melanocytic_nevi.jpg?height=300&width=500",
     github: "https://github.com/HemanthKumar-CS/Melanocytic_Nevi_Classification_using_Transfer_Learning",
   },
   {
-    id: 3,
+    id: 5,
+    title: "AgroBalance – Smart Soil Monitoring",
+    role: "ML & Embedded Systems Engineer",
+    impact: "Precision agriculture optimization",
+    description:
+      "IoT-integrated smart soil monitoring system with ML-powered crop and fertilizer recommendations via NPK sensor and Raspberry Pi.",
+    longDescription:
+      "Integrated NPK sensor with Raspberry Pi via Modbus RTU protocol to read real-time soil nutrient data. Built an ML recommendation engine that analyzes NPK levels and environmental parameters to suggest optimal crops and fertilizer amounts. The system bridges embedded hardware with machine learning inference to provide actionable insights for precision agriculture.",
+    tags: ["AI/ML"],
+    tech: ["Python", "Raspberry Pi", "Modbus RTU", "scikit-learn", "TensorFlow Lite", "Flask"],
+    image: "/placeholder.svg?height=300&width=500",
+    github: "https://github.com/HemanthKumar-CS",
+  },
+  {
+    id: 6,
     title: "Move Mentor",
     role: "Team Lead & Full-Stack Developer",
     impact: "Reduced wait times by 40%",
@@ -48,7 +90,7 @@ const projects = [
     github: "https://github.com/HemanthKumar-CS/move_mentor",
   },
   {
-    id: 4,
+    id: 7,
     title: "Disease Prediction System",
     role: "Machine Learning Engineer",
     impact: "Early disease detection",
@@ -63,7 +105,7 @@ const projects = [
   },
 ]
 
-const filterTags = ["All", "AI/ML", "Web Dev", "Computer Vision", "Cybersecurity"]
+const filterTags = ["All", "AI/ML", "Web Dev", "Computer Vision", "Cybersecurity", "Federated Learning"]
 
 export default function Projects() {
   const [selectedFilter, setSelectedFilter] = useState("All")

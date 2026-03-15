@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { FiUsers, FiShield, FiBook, FiCode, FiTarget } from "react-icons/fi"
+import { FiUsers, FiShield, FiBook, FiCode, FiTarget, FiBriefcase } from "react-icons/fi"
 
 // Combined timeline data (journey + experience)
 const timelineData = [
@@ -13,7 +13,7 @@ const timelineData = [
     type: "Education",
     description: "Pursuing Bachelor of Engineering with AI & ML Specialization (Expected 2026)",
     highlights: [
-      "Current CGPA: 8.28/10",
+      "Current CGPA: 8.4/10",
       "Coursework: Machine Learning, Deep Learning, Computer Vision, DSA, DBMS, Software Engineering",
       "Active in technical societies and competitive programming"
     ],
@@ -27,7 +27,7 @@ const timelineData = [
     title: "Cybersecurity Intern",
     company: "Academor (Remote)",
     type: "Internship",
-    description: "Completed comprehensive training in network security and ethical hacking",
+    description: "Completed network security training and hands-on vulnerability assessments (Aug 2023 – Nov 2023)",
     highlights: [
       "Gained hands-on experience with penetration testing and vulnerability assessment",
       "Worked with industry-standard security tools and frameworks",
@@ -59,7 +59,7 @@ const timelineData = [
     title: "Media Head",
     company: "IET onCampus ATMECE",
     type: "Leadership",
-    description: "Leading content strategy for 60+ member technical society (2024 - Present)",
+    description: "Leading content & outreach for a 60+ member technical society (Dec 2024 - Present)",
     highlights: [
       "Led content strategy increasing engagement by 60%",
       "Organized 7+ technical events and workshops with 90% attendance rate",
@@ -118,6 +118,22 @@ const timelineData = [
     technologies: ["Event Planning", "Project Management", "Coordination", "Leadership"],
     icon: FiTarget,
     color: "from-cyan-500 to-blue-500",
+  },
+  {
+    id: 8,
+    year: "2026",
+    title: "Student Intern - IT Department",
+    company: "HAL (Hindustan Aeronautics Limited), Bangalore",
+    type: "Internship",
+    description: "IT Department, Overhaul Division – Jan 2026 to Present",
+    highlights: [
+      "Built an intranet-based solution for the Overhaul Division to streamline inter-department folder organization and file accessibility",
+      "Resolved real-time inter-department communication and documentation challenges for the Customer Service department",
+      "Developing production-grade internal tools in a government aerospace environment"
+    ],
+    technologies: ["Python", "Intranet Development", "System Design", "Documentation"],
+    icon: FiBriefcase,
+    color: "from-emerald-500 to-cyan-500",
   },
 ]
 

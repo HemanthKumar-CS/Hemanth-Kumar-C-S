@@ -7,19 +7,17 @@ import {
   SiKeras,
   SiOpencv,
   SiFlask,
-  SiReact,
   SiMongodb,
   SiMysql,
   SiFirebase,
   SiGit,
   SiJupyter,
-  SiTableau,
-  SiJavascript,
-  SiHtml5,
-  SiCss3,
+  SiDocker,
+  SiPytorch,
+  SiRaspberrypi,
 } from "react-icons/si"
 import { FaJava } from "react-icons/fa"
-import { FiDatabase, FiShield, FiCode, FiCpu } from "react-icons/fi"
+import { FiDatabase, FiCode, FiCpu, FiZap } from "react-icons/fi"
 
 const techCategories = [
   {
@@ -28,30 +26,33 @@ const techCategories = [
     color: "from-blue-500 to-cyan-500",
     technologies: [
       { name: "Python", icon: SiPython },
-      { name: "R", icon: FiCode },
       { name: "TensorFlow", icon: SiTensorflow },
       { name: "Keras", icon: SiKeras },
-      { name: "OpenCV", icon: SiOpencv },
+      { name: "PyTorch", icon: SiPytorch },
       { name: "scikit-learn", icon: FiCode },
+      { name: "Flower (FL)", icon: FiCode },
+      { name: "ONNX Runtime", icon: FiCpu },
+      { name: "R", icon: FiCode },
     ],
   },
   {
-    title: "Web Development",
+    title: "Computer Vision",
     icon: FiCode,
+    color: "from-purple-500 to-pink-500",
+    technologies: [
+      { name: "OpenCV", icon: SiOpencv },
+      { name: "YOLOv8/v11", icon: FiCode },
+      { name: "MediaPipe", icon: FiCode },
+      { name: "ByteTrack", icon: FiCode },
+    ],
+  },
+  {
+    title: "Web & Databases",
+    icon: FiDatabase,
     color: "from-green-500 to-teal-500",
     technologies: [
       { name: "Flask", icon: SiFlask },
-      { name: "React Native", icon: SiReact },
-      { name: "HTML", icon: SiHtml5 },
-      { name: "CSS", icon: SiCss3 },
-      { name: "JavaScript", icon: SiJavascript },
-    ],
-  },
-  {
-    title: "Databases",
-    icon: FiDatabase,
-    color: "from-slate-500 to-cyan-500",
-    technologies: [
+      { name: "Streamlit", icon: FiCode },
       { name: "MongoDB", icon: SiMongodb },
       { name: "MySQL", icon: SiMysql },
       { name: "Firebase", icon: SiFirebase },
@@ -60,13 +61,13 @@ const techCategories = [
   },
   {
     title: "Tools & Others",
-    icon: FiShield,
+    icon: FiZap,
     color: "from-orange-500 to-red-500",
     technologies: [
       { name: "Git", icon: SiGit },
+      { name: "Docker", icon: SiDocker },
       { name: "Jupyter", icon: SiJupyter },
-      { name: "Tableau", icon: SiTableau },
-      { name: "PowerBI", icon: FiCode },
+      { name: "Power BI", icon: FiCode },
       { name: "Java", icon: FaJava },
     ],
   },
@@ -127,7 +128,7 @@ export default function TechStack() {
           ))}
         </div>
 
-        {/* Cybersecurity Tools */}
+        {/* Edge Computing */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -136,13 +137,13 @@ export default function TechStack() {
         >
           <div className="flex items-center gap-4 mb-6">
             <div className="p-3 rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500">
-              <FiShield className="text-white" size={24} />
+              <SiRaspberrypi className="text-white" size={24} />
             </div>
-            <h3 className="text-xl font-bold text-white">Cybersecurity Tools</h3>
+            <h3 className="text-xl font-bold text-white">Edge Computing</h3>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {["Kali Linux", "Wireshark", "Nmap", "Aircrack-ng"].map((tool, index) => (
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {["TensorFlow Lite", "Raspberry Pi", "Modbus/RS485"].map((tool, index) => (
               <motion.div
                 key={tool}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -152,7 +153,7 @@ export default function TechStack() {
                 whileHover={{ scale: 1.05 }}
                 className="bg-gray-700/30 rounded-lg p-4 text-center hover:bg-gray-700/50 transition-all"
               >
-                <FiShield className="text-emerald-400 text-2xl mx-auto mb-2" />
+                <SiRaspberrypi className="text-emerald-400 text-2xl mx-auto mb-2" />
                 <span className="text-white text-sm font-medium">{tool}</span>
               </motion.div>
             ))}

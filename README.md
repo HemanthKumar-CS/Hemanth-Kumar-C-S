@@ -51,7 +51,6 @@ A modern, responsive portfolio website showcasing AI/ML projects, skills, and ex
 1. Clone the repository
 ```bash
 git clone https://github.com/HemanthKumar-CS/hemanth-portfolio.git
-cd hemanth-portfolio
 ```
 
 2. Install dependencies

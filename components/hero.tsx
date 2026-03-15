@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { FiArrowDown, FiGithub, FiLinkedin, FiMail, FiDownload } from "react-icons/fi"
 
-const roles = ["ML Engineer", "AI Innovator", "Hackathon Champion", "Tech Visionary"]
+const roles = ["ML Engineer", "Deep Learning Engineer", "AI Innovator", "Hackathon Champion"]
 
 export default function Hero() {
   const handleEmailClick = () => {
@@ -99,8 +99,8 @@ export default function Hero() {
             transition={{ delay: 0.6 }}
             className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed text-center"
           >
-            Passionate about building innovative web applications and exploring AI/ML technologies. 
-            Always eager to learn new technologies and create meaningful software solutions.
+            AI & ML Engineering student with industry experience at HAL (Hindustan Aeronautics Limited).
+            Building production-grade ML systems with real-time inference on edge devices. IEEE-published researcher in federated learning.
           </motion.p>
 
           <motion.div
@@ -132,8 +132,8 @@ export default function Hero() {
             </motion.button>
 
             <motion.a
-              href="/HEMANTH_KUMAR_CS_Resume.pdf"
-              download="HEMANTH_KUMAR_CS_Resume.pdf"
+              href="/Hemanth_Kumar_CS-Resume.pdf"
+              download="Hemanth_Kumar_CS-Resume.pdf"
               whileHover={{ 
                 scale: 1.05,
                 boxShadow: "0 0 30px rgba(71, 85, 105, 0.4)"

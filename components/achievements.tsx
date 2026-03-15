@@ -2,11 +2,22 @@
 
 import { motion } from "framer-motion"
 import { FaTrophy } from "react-icons/fa"
-import { FiAward, FiStar, FiTarget } from "react-icons/fi"
+import { FiAward, FiStar, FiTarget, FiBook } from "react-icons/fi"
 
 const achievements = [
   {
     id: 1,
+    title: "IEEE ICAFT 2025 – Research Paper",
+    organization: "IEEE Conference on Advanced Future Technologies",
+    year: "2025",
+    type: "Research",
+    icon: FiBook,
+    color: "from-blue-500 to-indigo-500",
+    description: "Research paper accepted for presentation",
+    details: "Federated Learning for DDoS Detection with privacy preservation using Multi-Krum + FedAvg aggregation",
+  },
+  {
+    id: 2,
     title: "Winner - Invaders Hackathon",
     organization: "MIT Mysuru",
     year: "2023",
@@ -17,7 +28,7 @@ const achievements = [
     details: "Won for innovative AI/ML solution implementation",
   },
   {
-    id: 2,
+    id: 3,
     title: "Runner-Up - Code Battle 2K25",
     organization: "KLSVDIT Haliyal",
     year: "2025",
@@ -28,7 +39,7 @@ const achievements = [
     details: "Secured runner-up position in competitive programming",
   },
   {
-    id: 3,
+    id: 4,
     title: "Finalist - RVCExIITB CTF 24",
     organization: "RV College of Engineering",
     year: "2024",
@@ -39,7 +50,7 @@ const achievements = [
     details: "Reached finals in cybersecurity competition",
   },
   {
-    id: 4,
+    id: 5,
     title: "Active Hackathon Participant",
     organization: "Various Institutions",
     year: "2024-2025",
@@ -53,9 +64,9 @@ const achievements = [
 
 const certifications = [
   "Machine Learning with TensorFlow - Infosys Springboard",
-  "Cybersecurity Fundamentals - Infosys Springboard",
-  "Introduction to SQL - Oracle",
+  "Building LLM Apps with Prompt Engineering - Nvidia",
   "Analytics and Data Visualization - Tableau",
+  "Oracle SQL - Oracle",
 ]
 
 export default function Achievements() {
@@ -79,7 +90,7 @@ export default function Achievements() {
         {/* Trophy Shelf */}
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-white mb-8 text-center">Competition Awards</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {achievements.map((achievement, index) => (
               <motion.div
                 key={achievement.id}
