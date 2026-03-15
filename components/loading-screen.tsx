@@ -56,7 +56,7 @@ export default function LoadingScreen() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.45 }}
       className="fixed inset-0 z-50 flex items-center justify-center"
-      style={{ background: "#020817" }}
+      style={{ background: "#060414" }}
     >
       {/* Scanline overlay */}
       <div
@@ -73,7 +73,7 @@ export default function LoadingScreen() {
         className="absolute inset-0 pointer-events-none"
         style={{
           backgroundImage:
-            "radial-gradient(rgba(6, 182, 212, 0.2) 1px, transparent 1px)",
+            "radial-gradient(rgba(139, 92, 246, 0.2) 1px, transparent 1px)",
           backgroundSize: "30px 30px",
           opacity: 0.25,
           zIndex: 1,
@@ -88,18 +88,18 @@ export default function LoadingScreen() {
           transition={{ duration: 0.35 }}
           className="rounded-xl overflow-hidden"
           style={{
-            background: "rgba(2, 12, 32, 0.96)",
-            border: "1px solid rgba(6, 182, 212, 0.28)",
+            background: "rgba(5, 2, 18, 0.96)",
+            border: "1px solid rgba(139, 92, 246, 0.28)",
             boxShadow:
-              "0 0 50px rgba(6, 182, 212, 0.12), 0 0 100px rgba(6, 182, 212, 0.05), 0 20px 40px rgba(0,0,0,0.5)",
+              "0 0 50px rgba(139, 92, 246, 0.12), 0 0 100px rgba(139, 92, 246, 0.05), 0 20px 40px rgba(0,0,0,0.5)",
           }}
         >
           {/* Title bar */}
           <div
             className="flex items-center gap-2 px-4 py-2.5 border-b"
             style={{
-              borderColor: "rgba(6, 182, 212, 0.18)",
-              background: "rgba(6, 182, 212, 0.04)",
+              borderColor: "rgba(139, 92, 246, 0.18)",
+              background: "rgba(139, 92, 246, 0.04)",
             }}
           >
             <div className="w-2.5 h-2.5 rounded-full bg-red-500/60" />
@@ -107,7 +107,7 @@ export default function LoadingScreen() {
             <div className="w-2.5 h-2.5 rounded-full bg-emerald-500/60" />
             <span
               className="ml-3 text-xs font-mono"
-              style={{ color: "rgba(6, 182, 212, 0.5)" }}
+              style={{ color: "rgba(139, 92, 246, 0.5)" }}
             >
               ~/neural-portfolio — bash
             </span>
@@ -123,7 +123,7 @@ export default function LoadingScreen() {
                 transition={{ duration: 0.2 }}
                 className="mb-1.5 flex items-center gap-1.5"
               >
-                <span style={{ color: "rgba(6, 182, 212, 0.85)" }}>{line.text}</span>
+                <span style={{ color: "rgba(167, 139, 250, 0.9)" }}>{line.text}</span>
                 {"tag" in line && line.tag && (
                   <span className="text-white/50">{line.tag}</span>
                 )}
@@ -149,26 +149,26 @@ export default function LoadingScreen() {
                 className="mt-3"
               >
                 <div className="flex justify-between items-center mb-1.5">
-                  <span style={{ color: "rgba(6, 182, 212, 0.5)", fontSize: "11px" }}>
+                  <span style={{ color: "rgba(139, 92, 246, 0.5)", fontSize: "11px" }}>
                     INITIALIZING
                   </span>
                   <span
-                    style={{ color: "rgba(6, 182, 212, 0.8)", fontSize: "11px" }}
+                    style={{ color: "rgba(167, 139, 250, 0.85)", fontSize: "11px" }}
                   >
                     {progress}%
                   </span>
                 </div>
                 <div
                   className="h-1.5 rounded-full overflow-hidden"
-                  style={{ background: "rgba(6, 182, 212, 0.12)" }}
+                  style={{ background: "rgba(139, 92, 246, 0.12)" }}
                 >
                   <div
                     className="h-full rounded-full"
                     style={{
                       width: `${progress}%`,
                       background:
-                        "linear-gradient(90deg, rgba(6,182,212,0.85), rgba(16,185,129,0.85))",
-                      boxShadow: "0 0 12px rgba(6, 182, 212, 0.6)",
+                        "linear-gradient(90deg, rgba(139,92,246,0.9), rgba(167,139,250,0.9))",
+                      boxShadow: "0 0 12px rgba(139, 92, 246, 0.6)",
                       transition: "width 0.05s linear",
                     }}
                   />
@@ -181,7 +181,7 @@ export default function LoadingScreen() {
               <motion.span
                 animate={{ opacity: [1, 0] }}
                 transition={{ duration: 0.55, repeat: Infinity }}
-                style={{ color: "rgba(6, 182, 212, 0.85)" }}
+                style={{ color: "rgba(167, 139, 250, 0.85)" }}
               >
                 █
               </motion.span>
@@ -202,8 +202,8 @@ export default function LoadingScreen() {
                 style={{
                   color: "white",
                   textShadow: glitch
-                    ? "3px 0 rgba(6,182,212,0.9), -3px 0 rgba(239,68,68,0.7), 0 0 20px rgba(6,182,212,0.5)"
-                    : "0 0 25px rgba(6,182,212,0.45), 0 0 50px rgba(6,182,212,0.2)",
+                    ? "3px 0 rgba(139,92,246,0.9), -3px 0 rgba(239,68,68,0.7), 0 0 20px rgba(139,92,246,0.5)"
+                    : "0 0 25px rgba(139,92,246,0.45), 0 0 50px rgba(139,92,246,0.2)",
                   letterSpacing: "0.06em",
                   transition: glitch ? "none" : "text-shadow 0.15s ease",
                   transform: glitch ? "translateX(2px)" : "none",

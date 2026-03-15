@@ -56,7 +56,7 @@ const achievements = [
     year: "2024-2025",
     type: "Participation",
     icon: FiTarget,
-    color: "from-slate-400 to-cyan-500",
+    color: "from-slate-400 to-violet-500",
     description: "Regular participant in hackathons",
     details: "Participated in Symbiot (VVCE), Hack Kshetra (VVCE), Fusion Techackathon (AIET)",
   },
@@ -79,7 +79,7 @@ export default function Achievements() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold font-orbitron mb-4 bg-gradient-to-r from-cyan-400 to-slate-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold font-orbitron mb-4 bg-gradient-to-r from-violet-400 to-slate-400 bg-clip-text text-transparent">
             Achievements
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -118,7 +118,7 @@ export default function Achievements() {
 
                       <h4 className="text-white font-bold mb-2 text-sm">{achievement.title}</h4>
                       <p className="text-gray-400 text-xs mb-1">{achievement.organization}</p>
-                      <p className="text-cyan-400 text-xs mb-3">{achievement.year}</p>
+                      <p className="text-violet-400 text-xs mb-3">{achievement.year}</p>
 
                       <div className="opacity-0 group-hover:opacity-100 transition-opacity">
                         <p className="text-gray-300 text-xs">{achievement.details}</p>
@@ -146,7 +146,7 @@ export default function Achievements() {
                 className="bg-gray-800/30 backdrop-blur-sm rounded-lg border border-slate-500/20 p-4 hover:border-slate-400/40 transition-all"
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-3 h-3 bg-gradient-to-r from-cyan-400 to-slate-500 rounded-full flex-shrink-0"></div>
+                  <div className="w-3 h-3 bg-gradient-to-r from-violet-400 to-slate-500 rounded-full flex-shrink-0"></div>
                   <p className="text-gray-300 text-sm">{cert}</p>
                 </div>
               </motion.div>

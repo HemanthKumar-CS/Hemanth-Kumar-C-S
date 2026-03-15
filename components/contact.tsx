@@ -17,7 +17,7 @@ export default function Contact() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold font-orbitron mb-4 bg-gradient-to-r from-cyan-400 to-slate-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold font-orbitron mb-4 bg-gradient-to-r from-violet-400 to-slate-400 bg-clip-text text-transparent">
             Get In Touch
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -41,16 +41,16 @@ export default function Contact() {
                 whileHover={{ 
                   scale: 1.05, 
                   y: -5,
-                  boxShadow: "0 0 30px rgba(6, 182, 212, 0.4)"
+                  boxShadow: "0 0 30px rgba(139, 92, 246, 0.4)"
                 }}
-                className="flex flex-col items-center gap-4 p-6 glass rounded-2xl hover:glass-strong transition-all cursor-pointer group border border-slate-700/30 hover:border-cyan-500/40"
+                className="flex flex-col items-center gap-4 p-6 glass rounded-2xl hover:glass-strong transition-all cursor-pointer group border border-slate-700/30 hover:border-violet-500/40"
                 style={{
                   backdropFilter: 'blur(20px)',
                   boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
                 }}
               >
-                <div className="p-4 rounded-2xl bg-gradient-to-r from-cyan-500 to-slate-600 group-hover:shadow-lg transition-all duration-300"
-                     style={{ boxShadow: '0 0 20px rgba(6, 182, 212, 0.3)' }}>
+                <div className="p-4 rounded-2xl bg-gradient-to-r from-violet-500 to-slate-600 group-hover:shadow-lg transition-all duration-300"
+                     style={{ boxShadow: '0 0 20px rgba(139, 92, 246, 0.3)' }}>
                   <FiMail className="text-white" size={24} />
                 </div>
                 <div>
@@ -133,7 +133,7 @@ export default function Contact() {
                 whileHover={{ scale: 1.1, y: -5 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={handleEmailClick}
-                className="p-4 bg-gray-800/50 backdrop-blur-sm rounded-full text-gray-300 hover:text-cyan-400 border border-gray-700 hover:border-cyan-400 transition-all hover:shadow-lg hover:shadow-cyan-400/25 cursor-pointer"
+                className="p-4 bg-gray-800/50 backdrop-blur-sm rounded-full text-gray-300 hover:text-violet-400 border border-gray-700 hover:border-violet-400 transition-all hover:shadow-lg hover:shadow-violet-400/25 cursor-pointer"
               >
                 <FiMail size={28} />
               </motion.div>
@@ -144,7 +144,7 @@ export default function Contact() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.5 }}
-              className="mt-12 p-6 bg-gradient-to-r from-cyan-500/10 to-slate-600/10 rounded-xl border border-slate-500/20"
+              className="mt-12 p-6 bg-gradient-to-r from-violet-500/10 to-slate-600/10 rounded-xl border border-slate-500/20"
             >
               <p className="text-gray-300 text-lg">
                 🚀 Looking for a passionate AI/ML developer for your next project?

@@ -19,7 +19,7 @@ const timelineData = [
     ],
     technologies: ["Python", "Machine Learning", "Deep Learning", "Computer Vision", "DSA"],
     icon: FiBook,
-    color: "from-blue-500 to-cyan-500",
+    color: "from-blue-500 to-violet-500",
   },
   {
     id: 2,
@@ -117,7 +117,7 @@ const timelineData = [
     ],
     technologies: ["Event Planning", "Project Management", "Coordination", "Leadership"],
     icon: FiTarget,
-    color: "from-cyan-500 to-blue-500",
+    color: "from-violet-500 to-blue-500",
   },
   {
     id: 8,
@@ -133,7 +133,7 @@ const timelineData = [
     ],
     technologies: ["Python", "Intranet Development", "System Design", "Documentation"],
     icon: FiBriefcase,
-    color: "from-emerald-500 to-cyan-500",
+    color: "from-emerald-500 to-violet-500",
   },
 ]
 
@@ -147,7 +147,7 @@ export default function Experience() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold font-orbitron mb-4 bg-gradient-to-r from-cyan-400 to-slate-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold font-orbitron mb-4 bg-gradient-to-r from-violet-400 to-slate-400 bg-clip-text text-transparent">
             Experience & Journey
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -158,7 +158,7 @@ export default function Experience() {
         {/* Clean Professional Timeline */}
         <div className="relative">
           {/* Timeline Line */}
-          <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyan-500 to-slate-600"></div>
+          <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-violet-500 to-slate-600"></div>
           
           {/* Timeline Items */}
           <div className="space-y-8">
@@ -186,7 +186,7 @@ export default function Experience() {
                   whileHover={{ x: 5 }}
                   className="flex-1 pb-2"
                 >
-                  <div className="p-6 glass rounded-2xl border border-slate-600/30 hover:border-cyan-500/40 transition-all duration-300">
+                  <div className="p-6 glass rounded-2xl border border-slate-600/30 hover:border-violet-500/40 transition-all duration-300">
                     {/* Header */}
                     <div className="flex flex-wrap items-center gap-3 mb-3">
                       <span className={`px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r ${item.color} text-white`}>
@@ -200,7 +200,7 @@ export default function Experience() {
                     <h3 className="text-xl font-bold text-white mb-1 font-orbitron">
                       {item.title}
                     </h3>
-                    <p className="text-cyan-400 text-sm mb-3">
+                    <p className="text-violet-400 text-sm mb-3">
                       {item.company}
                     </p>
                     <p className="text-gray-400 text-sm leading-relaxed mb-4">
@@ -213,7 +213,7 @@ export default function Experience() {
                         <ul className="space-y-1">
                           {item.highlights.map((highlight, idx) => (
                             <li key={idx} className="text-gray-400 text-xs flex items-start gap-2">
-                              <span className="w-1 h-1 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></span>
+                              <span className="w-1 h-1 bg-violet-400 rounded-full mt-2 flex-shrink-0"></span>
                               {highlight}
                             </li>
                           ))}
@@ -227,7 +227,7 @@ export default function Experience() {
                         {item.technologies.map((tech, idx) => (
                           <span
                             key={idx}
-                            className="px-2 py-1 text-xs bg-slate-800/50 text-cyan-300 rounded border border-slate-700/50"
+                            className="px-2 py-1 text-xs bg-slate-800/50 text-violet-300 rounded border border-slate-700/50"
                           >
                             {tech}
                           </span>

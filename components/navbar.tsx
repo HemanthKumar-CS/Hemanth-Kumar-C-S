@@ -48,13 +48,13 @@ export default function Navbar() {
       animate={{ y: 0 }}
       className={`fixed top-2 left-2 right-2 md:top-4 md:left-4 md:right-4 z-50 transition-all duration-500 rounded-2xl ${
         scrolled
-          ? "glass-strong shadow-xl shadow-cyan-500/10 border border-slate-700/50"
+          ? "glass-strong shadow-xl shadow-violet-500/10 border border-slate-700/50"
           : "glass-card border border-slate-800/30"
       }`}
       style={{
         backdropFilter: 'blur(20px)',
         boxShadow: scrolled 
-          ? '0 0 40px rgba(6, 182, 212, 0.15), 0 20px 25px -5px rgba(0, 0, 0, 0.1)'
+          ? '0 0 40px rgba(139, 92, 246, 0.15), 0 20px 25px -5px rgba(0, 0, 0, 0.1)'
           : '0 0 20px rgba(0, 0, 0, 0.1)'
       }}
     >
@@ -64,7 +64,7 @@ export default function Navbar() {
             whileHover={{ scale: 1.05 }} 
             className="text-2xl font-bold font-orbitron"
             style={{
-              filter: 'drop-shadow(0 0 8px rgba(6, 182, 212, 0.3))'
+              filter: 'drop-shadow(0 0 8px rgba(139, 92, 246, 0.3))'
             }}
           >
             <span className="bg-gradient-to-r from-white via-gray-300 to-gray-200 bg-clip-text text-transparent">
@@ -81,18 +81,18 @@ export default function Navbar() {
                 href={item.href}
                 whileHover={{ 
                   scale: 1.05,
-                  boxShadow: "0 0 20px rgba(6, 182, 212, 0.4)"
+                  boxShadow: "0 0 20px rgba(139, 92, 246, 0.4)"
                 }}
                 whileTap={{ scale: 0.95 }}
                 className={`px-3 lg:px-5 py-2 lg:py-2.5 rounded-full transition-all duration-300 font-medium text-sm lg:text-base ${
                   activeSection === item.href.substring(1)
-                    ? "glass-strong text-white shadow-lg border border-cyan-500/30"
+                    ? "glass-strong text-white shadow-lg border border-violet-500/30"
                     : "text-gray-300 hover:text-white hover:glass-card border border-transparent hover:border-slate-600/30"
                 }`}
                 style={{
                   backdropFilter: 'blur(10px)',
                   boxShadow: activeSection === item.href.substring(1)
-                    ? '0 0 25px rgba(6, 182, 212, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
+                    ? '0 0 25px rgba(139, 92, 246, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
                     : 'none'
                 }}
               >

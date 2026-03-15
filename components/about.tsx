@@ -9,7 +9,7 @@ const journeyData = [
     title: "Started AI & ML Engineering",
     description: "Began Bachelor of Engineering at ATME College of Engineering",
     icon: FiBook,
-    color: "from-blue-500 to-cyan-500"
+    color: "from-blue-500 to-violet-500"
   },
   {
     year: "2023",
@@ -37,14 +37,14 @@ const journeyData = [
     title: "TechAvishkar Organizer",
     description: "Co-organizing major hackathon event at ATMECE",
     icon: FiTarget,
-    color: "from-cyan-500 to-blue-500"
+    color: "from-violet-500 to-blue-500"
   },
   {
     year: "2026",
     title: "Student Intern at HAL",
     description: "IT Department, Overhaul Division, Hindustan Aeronautics Limited, Bangalore",
     icon: FiBriefcase,
-    color: "from-emerald-500 to-cyan-500"
+    color: "from-emerald-500 to-violet-500"
   },
 ]
 
@@ -87,7 +87,7 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold font-orbitron mb-4 bg-gradient-to-r from-cyan-400 to-slate-400 bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold font-orbitron mb-4 bg-gradient-to-r from-violet-400 to-slate-400 bg-clip-text text-transparent">
               About Me
             </h2>
           </motion.div>
@@ -117,10 +117,10 @@ export default function About() {
 
               {/* Key Highlights */}
               <div className="space-y-3">
-                <h4 className="text-lg font-semibold text-cyan-400 mb-4">Key Highlights</h4>
+                <h4 className="text-lg font-semibold text-violet-400 mb-4">Key Highlights</h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   <div className="flex items-center gap-3 p-3 glass-card rounded-lg">
-                    <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                    <div className="w-2 h-2 bg-violet-400 rounded-full"></div>
                     <span className="text-gray-300 text-sm">CGPA: 8.4/10</span>
                   </div>
                   <div className="flex items-center gap-3 p-3 glass-card rounded-lg">
@@ -182,17 +182,17 @@ export default function About() {
                         rotate: { duration: 20, repeat: Infinity, ease: "linear" },
                         scale: { duration: 4, repeat: Infinity, ease: "easeInOut" }
                       }}
-                      className="absolute -inset-6 rounded-full bg-gradient-to-r from-cyan-500 to-emerald-500 opacity-0 group-hover:opacity-60 blur-lg transition-opacity duration-700"
+                      className="absolute -inset-6 rounded-full bg-gradient-to-r from-violet-500 to-emerald-500 opacity-0 group-hover:opacity-60 blur-lg transition-opacity duration-700"
                     />
 
                     {/* Photo Container */}
-                    <div className="relative rounded-full p-2 bg-gradient-to-r from-cyan-500/40 via-blue-500/40 to-emerald-500/40 backdrop-blur-sm">
+                    <div className="relative rounded-full p-2 bg-gradient-to-r from-violet-500/40 via-blue-500/40 to-emerald-500/40 backdrop-blur-sm">
                       <img
                         src="/profile-picture.png"
                         alt="Hemanth Kumar"
                         className="w-64 h-64 rounded-full object-cover border-4 border-white/20 transition-all duration-500 group-hover:border-white/40"
                         style={{
-                          boxShadow: '0 0 40px rgba(6, 182, 212, 0.6), inset 0 2px 4px rgba(255, 255, 255, 0.2)'
+                          boxShadow: '0 0 40px rgba(139, 92, 246, 0.6), inset 0 2px 4px rgba(255, 255, 255, 0.2)'
                         }}
                       />
                     </div>
@@ -210,7 +210,7 @@ export default function About() {
                     repeat: Infinity,
                     ease: "easeInOut"
                   }}
-                  className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-emerald-500/20 rounded-3xl blur-2xl -z-10 group-hover:scale-110 transition-transform duration-700"
+                  className="absolute inset-0 bg-gradient-to-br from-violet-500/20 to-emerald-500/20 rounded-3xl blur-2xl -z-10 group-hover:scale-110 transition-transform duration-700"
                 />
               </motion.div>
             </motion.div>

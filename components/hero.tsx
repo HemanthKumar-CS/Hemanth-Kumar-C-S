@@ -58,8 +58,8 @@ export default function Hero() {
             transform: "rotateX(78deg)",
             transformOrigin: "bottom center",
             backgroundImage: `
-              linear-gradient(rgba(6, 182, 212, 0.07) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(6, 182, 212, 0.07) 1px, transparent 1px)
+              linear-gradient(rgba(139, 92, 246, 0.07) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(139, 92, 246, 0.07) 1px, transparent 1px)
             `,
             backgroundSize: "55px 55px",
             maskImage: "linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 85%)",
@@ -80,10 +80,10 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-4 py-2 glass-card rounded-full text-white bg-green-900/30 text-sm font-medium mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 glass-card rounded-full text-white border border-emerald-500/25 text-sm font-medium mb-8"
             >
-            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-            Available for Internships & Works
+            <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
+            Open to Internships &amp; Collaborations
             </motion.div>
 
           <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold font-orbitron mb-6 leading-tight">
@@ -99,7 +99,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="block bg-gradient-to-r from-cyan-400 via-slate-300 to-white bg-clip-text text-transparent"
+              className="block bg-gradient-to-r from-violet-400 via-slate-300 to-white bg-clip-text text-transparent"
             >
               C S
             </motion.span>
@@ -137,15 +137,15 @@ export default function Hero() {
             <motion.button
               whileHover={{ 
                 scale: 1.05, 
-                boxShadow: "0 0 40px rgba(6, 182, 212, 0.5)"
+                boxShadow: "0 0 40px rgba(139, 92, 246, 0.5)"
               }}
               whileTap={{ scale: 0.95 }}
               onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
-              className="group px-6 sm:px-8 py-3 sm:py-4 glass-strong rounded-2xl text-white font-semibold text-base sm:text-lg shadow-lg transition-all duration-300 border border-cyan-500/30 w-full sm:w-auto text-center"
+              className="group px-6 sm:px-8 py-3 sm:py-4 glass-strong rounded-2xl text-white font-semibold text-base sm:text-lg shadow-lg transition-all duration-300 border border-violet-500/30 w-full sm:w-auto text-center"
               data-magnetic="true"
               style={{
                 backdropFilter: 'blur(20px)',
-                boxShadow: '0 0 30px rgba(6, 182, 212, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
+                boxShadow: '0 0 30px rgba(139, 92, 246, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
               }}
             >
               <span className="flex items-center gap-2">
@@ -194,11 +194,11 @@ export default function Hero() {
                   whileHover={{ 
                     scale: 1.2, 
                     y: -5,
-                    boxShadow: "0 0 25px rgba(6, 182, 212, 0.4)"
+                    boxShadow: "0 0 25px rgba(139, 92, 246, 0.4)"
                   }}
                   whileTap={{ scale: 0.9 }}
                   onClick={social.onClick}
-                  className="p-4 glass-card rounded-2xl text-gray-400 hover:text-white hover:glass-strong transition-all duration-300 border border-slate-700/30 hover:border-cyan-500/40"
+                  className="p-4 glass-card rounded-2xl text-gray-400 hover:text-white hover:glass-strong transition-all duration-300 border border-slate-700/30 hover:border-violet-500/40"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1 + index * 0.1 }}
@@ -215,13 +215,13 @@ export default function Hero() {
                   whileHover={{ 
                     scale: 1.2, 
                     y: -5,
-                    boxShadow: "0 0 25px rgba(6, 182, 212, 0.4)"
+                    boxShadow: "0 0 25px rgba(139, 92, 246, 0.4)"
                   }}
                   whileTap={{ scale: 0.9 }}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-4 glass-card rounded-2xl text-gray-400 hover:text-white hover:glass-strong transition-all duration-300 border border-slate-700/30 hover:border-cyan-500/40"
+                  className="p-4 glass-card rounded-2xl text-gray-400 hover:text-white hover:glass-strong transition-all duration-300 border border-slate-700/30 hover:border-violet-500/40"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1 + index * 0.1 }}
@@ -241,7 +241,7 @@ export default function Hero() {
         <motion.div
           animate={{ y: [0, 15, 0] }}
           transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-          className="absolute bottom-8 left-1/2.5 -translate-x-1/2 flex flex-col items-center gap-2"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
         >
           <span className="text-gray-400 text-sm font-medium">Scroll to explore</span>
           <FiArrowDown size={24} className="text-white" />

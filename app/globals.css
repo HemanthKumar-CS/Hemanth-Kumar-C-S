@@ -11,10 +11,10 @@
     font-family: var(--font-inter), "Inter", sans-serif;
     cursor: none !important;
     overflow-x: hidden;
-    background: #000000;
-    background-image: 
-      radial-gradient(at 20% 20%, rgba(255, 255, 255, 0.02) 0px, transparent 40%),
-      radial-gradient(at 80% 80%, rgba(255, 255, 255, 0.015) 0px, transparent 40%);
+    background: #060414;
+    background-image:
+      radial-gradient(at 20% 20%, rgba(139, 92, 246, 0.03) 0px, transparent 40%),
+      radial-gradient(at 80% 80%, rgba(99, 102, 241, 0.025) 0px, transparent 40%);
     background-attachment: fixed;
   }
 
@@ -32,44 +32,44 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(139, 92, 246, 0.25);
     border-radius: 4px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(139, 92, 246, 0.4);
   }
 
   /* Firefox scrollbar */
   html {
     scrollbar-width: thin;
-    scrollbar-color: rgba(255, 255, 255, 0.2) rgba(0, 0, 0, 0.2);
+    scrollbar-color: rgba(139, 92, 246, 0.35) rgba(0, 0, 0, 0.2);
   }
 
   /* Glassmorphism utility classes */
   .glass {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(139, 92, 246, 0.1);
   }
 
   .glass-card {
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.025);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(139, 92, 246, 0.07);
   }
 
   .glass-strong {
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(139, 92, 246, 0.07);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(139, 92, 246, 0.18);
   }
 
   /* Force cursor none on all interactive elements */
-  a, button, input, textarea, select, 
+  a, button, input, textarea, select,
   [role="button"], [role="link"], [role="tab"],
   .cursor-pointer, *:hover, *:focus, *:active {
     cursor: none !important;
@@ -142,47 +142,45 @@
   }
 }
 
-/* Custom scrollbar with modern design */
+/* Custom scrollbar with violet theme */
 ::-webkit-scrollbar {
   width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0f172a;
+  background: #0d0b1e;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #10b981, #3b82f6);
+  background: rgba(139, 92, 246, 0.4);
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #059669, #2563eb);
+  background: rgba(139, 92, 246, 0.6);
 }
 
 /* Advanced glassmorphism */
 .glass {
-  background: rgba(15, 23, 42, 0.8);
+  background: rgba(6, 4, 20, 0.8);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.1);
 }
 
 .glass-light {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.07);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 /* Professional gradient backgrounds */
 .gradient-professional {
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  background: linear-gradient(135deg, #0d0b1e 0%, #120e2a 50%, #1a1535 100%);
 }
 
 .gradient-accent {
-  background: linear-gradient(135deg, #10b981 0%, #3b82f6 50%, #8b5cf6 100%);
+  background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 50%, #a78bfa 100%);
 }
-
-
 
 /* Smooth transitions for all interactive elements */
 button,
@@ -194,25 +192,26 @@ a,
 /* Professional focus styles */
 button:focus-visible,
 a:focus-visible {
-  outline: 2px solid #10b981;
+  outline: 2px solid rgba(139, 92, 246, 0.7);
   outline-offset: 2px;
 }
 
-/* ─── Neural Interface theme additions ─────────────────────────────────────── */
+/* ─── Violet theme additions ────────────────────────────────────────────────── */
 
 /* Text selection */
-::selection        { background: rgba(6, 182, 212, 0.28); color: white; }
-::-moz-selection   { background: rgba(6, 182, 212, 0.28); color: white; }
+::selection        { background: rgba(139, 92, 246, 0.3); color: white; }
+::-moz-selection   { background: rgba(139, 92, 246, 0.3); color: white; }
 
 /* Text glow */
-.text-glow-cyan  { text-shadow: 0 0 16px rgba(6,182,212,0.7), 0 0 32px rgba(6,182,212,0.3); }
-.text-glow-white { text-shadow: 0 0 16px rgba(255,255,255,0.5), 0 0 32px rgba(255,255,255,0.2); }
+.text-glow-violet { text-shadow: 0 0 16px rgba(139,92,246,0.7), 0 0 32px rgba(139,92,246,0.3); }
+.text-glow-cyan   { text-shadow: 0 0 16px rgba(139,92,246,0.7), 0 0 32px rgba(139,92,246,0.3); }
+.text-glow-white  { text-shadow: 0 0 16px rgba(255,255,255,0.5), 0 0 32px rgba(255,255,255,0.2); }
 
 /* Box glow */
-.box-glow        { box-shadow: 0 0 16px rgba(6,182,212,0.28), 0 0 32px rgba(6,182,212,0.1); }
-.box-glow-strong { box-shadow: 0 0 26px rgba(6,182,212,0.5),  0 0 52px rgba(6,182,212,0.2); }
+.box-glow        { box-shadow: 0 0 16px rgba(139,92,246,0.28), 0 0 32px rgba(139,92,246,0.1); }
+.box-glow-strong { box-shadow: 0 0 26px rgba(139,92,246,0.5),  0 0 52px rgba(139,92,246,0.2); }
 
-/* CRT scanlines — used by loading screen and hero overlay */
+/* CRT scanlines */
 .scanlines {
   position: absolute;
   inset: 0;
@@ -236,7 +235,7 @@ a:focus-visible {
   position: absolute;
   left: 0; right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.06), transparent);
+  background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.06), transparent);
   animation: scanline-sweep 6s linear infinite;
   pointer-events: none;
 }
@@ -244,12 +243,10 @@ a:focus-visible {
 /* Ambient card hover */
 .glass:hover,
 .glass-card:hover {
-  border-color: rgba(6, 182, 212, 0.15);
+  border-color: rgba(139, 92, 246, 0.18);
 }
 
 /* Section heading drop-shadow glow */
 section h2 {
-  filter: drop-shadow(0 0 10px rgba(6, 182, 212, 0.15));
+  filter: drop-shadow(0 0 10px rgba(139, 92, 246, 0.18));
 }
-
-

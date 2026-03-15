@@ -123,7 +123,7 @@ export default function Projects() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold font-orbitron mb-4 bg-gradient-to-r from-cyan-400 to-slate-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold font-orbitron mb-4 bg-gradient-to-r from-violet-400 to-slate-400 bg-clip-text text-transparent">
             Featured Projects
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -147,7 +147,7 @@ export default function Projects() {
               onClick={() => setSelectedFilter(tag)}
               className={`px-6 py-2 rounded-full font-medium transition-all ${
                 selectedFilter === tag
-                  ? "bg-gradient-to-r from-cyan-500 to-slate-600 text-white"
+                  ? "bg-gradient-to-r from-violet-500 to-slate-600 text-white"
                   : "glass-card text-gray-400 hover:text-white"
               }`}
             >
@@ -169,9 +169,9 @@ export default function Projects() {
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ 
                   y: -10,
-                  boxShadow: "0 0 40px rgba(6, 182, 212, 0.3)"
+                  boxShadow: "0 0 40px rgba(139, 92, 246, 0.3)"
                 }}
-                className="glass rounded-2xl overflow-hidden cursor-pointer group border border-slate-700/30 hover:border-cyan-500/40 transition-all duration-300"
+                className="glass rounded-2xl overflow-hidden cursor-pointer group border border-slate-700/30 hover:border-violet-500/40 transition-all duration-300"
                 onClick={() => setSelectedProject(project)}
                 style={{
                   backdropFilter: 'blur(20px)',
@@ -196,7 +196,7 @@ export default function Projects() {
                   </div>
 
                   <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-                  <p className="text-cyan-400 text-sm mb-2">{project.role}</p>
+                  <p className="text-violet-400 text-sm mb-2">{project.role}</p>
                   <p className="text-gray-400 text-sm mb-4">{project.description}</p>
 
                   <div className="flex flex-wrap gap-2">
@@ -258,7 +258,7 @@ export default function Projects() {
                   </div>
 
                   <h3 className="text-3xl font-bold text-white mb-2">{selectedProject.title}</h3>
-                  <p className="text-cyan-400 mb-4">{selectedProject.role}</p>
+                  <p className="text-violet-400 mb-4">{selectedProject.role}</p>
                   <p className="text-gray-300 mb-6 leading-relaxed">{selectedProject.longDescription}</p>
 
                   <div className="mb-6">
@@ -291,7 +291,7 @@ export default function Projects() {
                         href={(selectedProject as any).demo}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-slate-600 text-white rounded-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all"
+                        className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-violet-500 to-slate-600 text-white rounded-lg hover:shadow-lg hover:shadow-violet-500/25 transition-all"
                       >
                         <FiExternalLink size={20} />
                         Live Demo

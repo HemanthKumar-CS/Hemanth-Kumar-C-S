@@ -47,7 +47,7 @@ const hackathons = [
     achievement: "Organizer",
     participants: "200+",
     coordinates: { x: 45, y: 30 },
-    color: "from-cyan-400 to-blue-500",
+    color: "from-violet-400 to-blue-500",
     description: "Organization committee member for major hackathon event",
   },
   {
@@ -69,7 +69,7 @@ const hackathons = [
     achievement: "Participant",
     participants: "70+",
     coordinates: { x: 20, y: 20 },
-    color: "from-slate-400 to-cyan-500",
+    color: "from-slate-400 to-violet-500",
     description: "Engaged in collaborative problem-solving event",
   },
   {
@@ -97,7 +97,7 @@ export default function HackathonMap() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold font-orbitron mb-4 bg-gradient-to-r from-cyan-400 to-slate-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold font-orbitron mb-4 bg-gradient-to-r from-violet-400 to-slate-400 bg-clip-text text-transparent">
             Hackathon Journey
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -317,9 +317,9 @@ export default function HackathonMap() {
                     </div>
 
                     {/* Enhanced Tooltip */}
-                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-3 px-3 py-2 bg-black/90 text-white text-sm rounded-lg whitespace-nowrap opacity-0 hover:opacity-100 transition-all duration-200 shadow-lg border border-cyan-500/20 backdrop-blur-sm">
+                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-3 px-3 py-2 bg-black/90 text-white text-sm rounded-lg whitespace-nowrap opacity-0 hover:opacity-100 transition-all duration-200 shadow-lg border border-violet-500/20 backdrop-blur-sm">
                       <div className="font-semibold">{hackathon.name}</div>
-                      <div className="text-xs text-cyan-300">{hackathon.achievement}</div>
+                      <div className="text-xs text-violet-300">{hackathon.achievement}</div>
                       {/* Tooltip arrow */}
                       <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black/90"></div>
                     </div>
@@ -347,7 +347,7 @@ export default function HackathonMap() {
                 </div>
 
                 <h4 className="text-lg font-bold text-white mb-2">{selectedHackathon.name}</h4>
-                <p className="text-cyan-400 mb-4">{selectedHackathon.location}</p>
+                <p className="text-violet-400 mb-4">{selectedHackathon.location}</p>
 
                 <div className="space-y-3 mb-4">
                   <div className="flex items-center gap-2">
@@ -376,7 +376,7 @@ export default function HackathonMap() {
             {/* Quick Stats */}
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-gray-800/30 backdrop-blur-sm rounded-lg border border-slate-500/20 p-4 text-center">
-                <div className="text-2xl font-bold text-cyan-400 mb-1">7</div>
+                <div className="text-2xl font-bold text-violet-400 mb-1">7</div>
                 <div className="text-gray-400 text-sm">Events</div>
               </div>
               <div className="bg-gray-800/30 backdrop-blur-sm rounded-lg border border-slate-500/20 p-4 text-center">

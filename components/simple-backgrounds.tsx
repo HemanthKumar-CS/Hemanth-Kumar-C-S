@@ -15,10 +15,10 @@ const STARS = Array.from({ length: 80 }, (_, i) => ({
 export default function AuroraBackground() {
   return (
     <div className="fixed inset-0 overflow-hidden">
-      {/* Deep space base */}
-      <div className="absolute inset-0" style={{ background: "#020817" }} />
+      {/* Deep space base — near-black with violet tint */}
+      <div className="absolute inset-0" style={{ background: "#060414" }} />
 
-      {/* Aurora blob 1 — Cyan (top-left) */}
+      {/* Aurora blob 1 — Indigo (top-left) */}
       <motion.div
         className="absolute rounded-full"
         style={{
@@ -27,7 +27,7 @@ export default function AuroraBackground() {
           top: "-18vw",
           left: "-18vw",
           background:
-            "radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.22), transparent 70%)",
+            "radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.22), transparent 70%)",
           filter: "blur(90px)",
         }}
         animate={{
@@ -38,7 +38,7 @@ export default function AuroraBackground() {
         transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
       />
 
-      {/* Aurora blob 2 — Indigo/Violet (bottom-right) */}
+      {/* Aurora blob 2 — Violet (bottom-right) */}
       <motion.div
         className="absolute rounded-full"
         style={{
@@ -47,7 +47,7 @@ export default function AuroraBackground() {
           bottom: "-22vw",
           right: "-22vw",
           background:
-            "radial-gradient(circle at 50% 50%, rgba(109, 40, 217, 0.18), transparent 70%)",
+            "radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.22), transparent 70%)",
           filter: "blur(110px)",
         }}
         animate={{
@@ -58,7 +58,7 @@ export default function AuroraBackground() {
         transition={{ duration: 28, repeat: Infinity, ease: "easeInOut", delay: 4 }}
       />
 
-      {/* Aurora blob 3 — Emerald (center-right) */}
+      {/* Aurora blob 3 — Rose/Fuchsia (center-right) — adds warmth and drama */}
       <motion.div
         className="absolute rounded-full"
         style={{
@@ -67,7 +67,7 @@ export default function AuroraBackground() {
           top: "28%",
           right: "-8%",
           background:
-            "radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.13), transparent 70%)",
+            "radial-gradient(circle at 50% 50%, rgba(217, 70, 239, 0.13), transparent 70%)",
           filter: "blur(130px)",
         }}
         animate={{
@@ -78,7 +78,7 @@ export default function AuroraBackground() {
         transition={{ duration: 20, repeat: Infinity, ease: "easeInOut", delay: 7 }}
       />
 
-      {/* Aurora blob 4 — Bright cyan accent (upper-right) */}
+      {/* Aurora blob 4 — Soft violet accent (upper-right) */}
       <motion.div
         className="absolute rounded-full"
         style={{
@@ -87,7 +87,7 @@ export default function AuroraBackground() {
           top: "8%",
           right: "8%",
           background:
-            "radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.11), transparent 70%)",
+            "radial-gradient(circle at 50% 50%, rgba(167, 139, 250, 0.15), transparent 70%)",
           filter: "blur(65px)",
         }}
         animate={{
@@ -98,12 +98,12 @@ export default function AuroraBackground() {
         transition={{ duration: 16, repeat: Infinity, ease: "easeInOut", delay: 2 }}
       />
 
-      {/* Subtle dot grid — gives the technical neuron-net feel */}
+      {/* Subtle dot grid — technical feel */}
       <div
         className="absolute inset-0"
         style={{
           backgroundImage:
-            "radial-gradient(rgba(6, 182, 212, 0.35) 1px, transparent 1px)",
+            "radial-gradient(rgba(139, 92, 246, 0.35) 1px, transparent 1px)",
           backgroundSize: "44px 44px",
           opacity: 0.05,
         }}
@@ -133,12 +133,12 @@ export default function AuroraBackground() {
         />
       ))}
 
-      {/* Edge vignette — darkens toward the corners */}
+      {/* Edge vignette */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 80% 80% at 50% 50%, transparent 40%, rgba(2, 8, 23, 0.55) 100%)",
+            "radial-gradient(ellipse 80% 80% at 50% 50%, transparent 40%, rgba(6, 4, 20, 0.6) 100%)",
         }}
       />
     </div>

@@ -160,7 +160,7 @@ export default function Resume() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold font-orbitron mb-4 bg-gradient-to-r from-cyan-400 to-slate-500 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold font-orbitron mb-4 bg-gradient-to-r from-violet-400 to-slate-500 bg-clip-text text-transparent">
             Interactive Resume
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
@@ -172,7 +172,7 @@ export default function Resume() {
             download="Hemanth_Kumar_CS-Resume.pdf"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-slate-600 rounded-full text-white font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-violet-500 to-slate-600 rounded-full text-white font-semibold hover:shadow-lg hover:shadow-violet-500/25 transition-all"
           >
             <FiDownload size={20} />
             Download Resume PDF
@@ -195,7 +195,7 @@ export default function Resume() {
                 whileHover={{ scale: 1.01 }}
               >
                 <div className="flex items-center gap-4">
-                  <div className="p-3 rounded-full bg-gradient-to-r from-cyan-500 to-slate-600">
+                  <div className="p-3 rounded-full bg-gradient-to-r from-violet-500 to-slate-600">
                     <section.icon className="text-white" size={20} />
                   </div>
                   <h3 className="text-xl font-bold text-white">{section.title}</h3>
@@ -237,7 +237,7 @@ export default function Resume() {
                         <div className="space-y-4">
                           <div>
                             <h4 className="text-blue-400 font-semibold mb-2">{(section.content as Education).degree}</h4>
-                            <p className="text-cyan-400">{(section.content as Education).specialization}</p>
+                            <p className="text-violet-400">{(section.content as Education).specialization}</p>
                             <p className="text-gray-300">{(section.content as Education).institution}</p>
                             <p className="text-gray-300">{(section.content as Education).university}</p>
                             <div className="flex gap-4 mt-2">
@@ -266,7 +266,7 @@ export default function Resume() {
                           {(section.content as Experience[]).map((exp: Experience, idx: number) => (
                             <div key={idx} className="border-l-2 border-blue-500 pl-4">
                               <h4 className="text-white font-semibold">{exp.role}</h4>
-                              <p className="text-cyan-400">{exp.company}</p>
+                              <p className="text-violet-400">{exp.company}</p>
                               <p className="text-gray-400 text-sm mb-2">{exp.period}</p>
                               <ul className="space-y-1">
                                 {exp.highlights.map((highlight: string, hidx: number) => (
@@ -301,7 +301,7 @@ export default function Resume() {
                               {(section.content as Skills).frameworks.map((framework: string) => (
                                 <span
                                   key={framework}
-                                  className="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm"
+                                  className="px-3 py-1 bg-violet-500/20 text-violet-400 rounded-full text-sm"
                                 >
                                   {framework}
                                 </span>
@@ -353,7 +353,7 @@ export default function Resume() {
                         <div className="space-y-3">
                           {(section.content as string[]).map((achievement: string, idx: number) => (
                             <div key={idx} className="flex items-start gap-3">
-                              <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-slate-500 rounded-full mt-2 flex-shrink-0"></div>
+                              <div className="w-2 h-2 bg-gradient-to-r from-violet-400 to-slate-500 rounded-full mt-2 flex-shrink-0"></div>
                               <p className="text-gray-300">{achievement}</p>
                             </div>
                           ))}
