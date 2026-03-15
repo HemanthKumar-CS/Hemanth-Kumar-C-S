@@ -43,6 +43,31 @@ export default function Hero() {
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
 
+      {/* Tron perspective horizon grid — receding floor effect */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-72 overflow-hidden pointer-events-none"
+        style={{ perspective: "380px", zIndex: 1 }}
+      >
+        <div
+          style={{
+            position: "absolute",
+            bottom: 0,
+            left: "-60%",
+            right: "-60%",
+            height: "420%",
+            transform: "rotateX(78deg)",
+            transformOrigin: "bottom center",
+            backgroundImage: `
+              linear-gradient(rgba(6, 182, 212, 0.07) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(6, 182, 212, 0.07) 1px, transparent 1px)
+            `,
+            backgroundSize: "55px 55px",
+            maskImage: "linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 85%)",
+            WebkitMaskImage: "linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 85%)",
+          }}
+        />
+      </div>
+
       <div className="relative z-10 text-center max-w-6xl mx-auto px-4 py-20 flex flex-col items-center justify-center min-h-screen">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
